@@ -19,7 +19,7 @@ function Home() {
       <div className="grid main shadow-md mt-20 mb-10 mx-20 gap-y-5">
         <header className="grid grid-row row-span-full m-20 grid-cols-4">
           <div className="col-span-4">
-            <h1 className="name font-bold text-5xl col-span-3 inline pink mr-3">Theresa Summa</h1>
+            <h1 className="name font-bold text-4xl col-span-3 inline pink mr-3">Theresa Summa</h1>
             <h2 className="location col-span-1 inline text-2xl light-gray">Software Engineering Leader in the SF Bay Area</h2>
           </div>
           <nav className="contact col-span-4 list-none text-2xl mt-2">
