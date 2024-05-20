@@ -1,7 +1,11 @@
-import { Inter } from "next/font/google";
+import { Rethink_Sans } from "next/font/google";
 import "./globals.css";
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css';
 
-const inter = Inter({ subsets: ["latin"] });
+config.autoAddCss = false
+
+const rethink = Rethink_Sans({ weight: ["400", "700"], subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -11,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={rethink.className}>{children}</body>
     </html>
   );
 }

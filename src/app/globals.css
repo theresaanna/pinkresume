@@ -3,9 +3,11 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 94, 96, 108;
+  --background-start-rgb: 252, 241, 239;
+  --background-end-rgb: 228, 186, 190;
+  --light-gray: 206, 211, 215;
+  --beige: 232, 216, 201;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,6 +26,55 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+a:link, a:visited, a:active {
+  border-bottom: 1px solid rgb(var(--light-gray));
+}
+
+header a:hover, a:active {
+  background-image: url('./linkbg.png');
+  border-bottom: none;
+}
+
+a:hover, a:active {
+  background-image: url('./linkbgheart.png');
+  border-bottom: none;
+  background-repeat: no-repeat;
+}
+
+.main {
+  background-color: #fff;
+}
+
+.hide-text {
+  visibility: collapse;
+}
+
+.beige {
+  color: rgb(var(--beige));
+}
+
+.pink {
+  color: rgb(var(--background-end-rgb));
+}
+
+.light-gray {
+  color: rgb(var(--light-gray));
+}
+
+.job a {
+  font-weight: bold;
+}
+
+.divider-hack {
+  transform: rotate(5deg);
+}
+
+.heart-bg {
+  background-image: url('./bgheart.png');
+  background-repeat: no-repeat;
+  background-position: 1rem;
 }
 
 @layer utilities {
