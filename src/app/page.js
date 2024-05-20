@@ -217,7 +217,7 @@ function Home() {
       <div className="grid main shadow-md m-20 gap-y-10 mb-5 heart-bg">
         <div className="grid grid-row row-span-full m-20">
           <h3 className="panel-header text-2xl light-gray">Made wth Love</h3>
-          <p>And built using <Link href="https://nextjs.org/">Next.js</Link>, <Link href="https://tailwindcss.com/">Tailwind CSS</Link>, <Link href="https://fonts.google.com/">Google Fonts</Link>, Github. Illustrative elements are © 2024 Theresa Summa</p>
+          <p>And built using <Link href="https://nextjs.org/">Next.js</Link>, <Link href="https://tailwindcss.com/">Tailwind CSS</Link>, <Link href="https://fonts.google.com/">Google Fonts</Link>, <Link href="https://github.com/theresaanna/pinkresume">Github</Link>. Illustrative elements are © 2024 Theresa Summa</p>
         </div>
       </div>
       <div className="grid gap-y-2 mx-20 mb-10 place-items-end">
