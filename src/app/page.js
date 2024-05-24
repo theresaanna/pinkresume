@@ -217,7 +217,7 @@ function Home() {
       <div className="grid main heart-bg no-printshadow-md mx-5 my-2 smartphone:mt-6 smartphone:mb-20 smartphone:mx-20 smartphone:gap-y-10 grid-flow-col">
         <div className="grid-row row-span-full m-20 grid-rows-3">
           <h3 className="panel-header text-2xl light-gray border-dashed border-b smartphone:text-3xl">Made with Love</h3>
-          <p>And built using <Link href="https://nextjs.org/">Next.js</Link>, <Link href="https://tailwindcss.com/">Tailwind CSS</Link>, <Link href="https://fonts.google.com/">Google Fonts</Link>, <Link href="https://github.com/theresaanna/pinkresume">Github</Link>. Illustrative elements are © 2024 Theresa Summa</p>
+          <p>And built using <Link href="https://nextjs.org/">Next.js</Link>, <Link href="https://tailwindcss.com/">Tailwind CSS</Link>, <Link href="https://fonts.google.com/">Google Fonts</Link>, <Link href="https://github.com/theresaanna/pinkresume">Github</Link> and deployed with <Link href="https://vercel.com">Vercel</Link>. Illustrative elements are © 2024 Theresa Summa</p>
         </div>
       </div>
       <div className="grid gap-y-2 mx-20 mb-10 place-items-end no-print">
