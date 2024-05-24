@@ -42,7 +42,7 @@ function Home() {
       <div className="grid main shadow-md mx-5 my-2 smartphone:mt-6 smartphone:mb-10 smartphone:mx-20 smartphone:gap-y-10 grid-flow-cols">
         <div className="grid-row row-span-full m-20 grid-rows-3">
           <h3 className="panel-header text-2xl light-gray mb-3">Some of my skills</h3>
-          <ul className="panel skills list-disc grid grid-rows-auto grid-cols-3 list-inside text-lg">
+          <ul className="panel skills list-disc grid grid-rows-auto grid-cols-3 list-inside text-sm gap-2 smartphone:text-lg">
             <li><Link href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics">JavaScript</Link></li>
             <li><Link href="https://react.dev/">React</Link></li>
             <li><Link href="https://sass-lang.com/">Sass</Link></li>
@@ -210,7 +210,7 @@ function Home() {
       <div className="grid gap-y-2 mx-20 place-items-center no-print">
         <div className="grid-row">
           <Image className="smartphone:col-span-1 inline collapse smartphone:visible" src={dividerheartlight} width="200"/>
-          <Image className="smartphone:col-span-2 smartphone:inline" src={dividerheartlight} width="300"/>
+          <Image className="smartphone:col-span-2 smart phone:inline" src={dividerheartlight} width="300"/>
           <Image className="smartphone:col-span-1 inline collapse smartphone:visible" src={dividerheartlight} width="200"/>
         </div>
       </div>
