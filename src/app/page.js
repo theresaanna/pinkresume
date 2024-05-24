@@ -16,30 +16,30 @@ import bgheart from './bgheart.png';
 function Home() {
   return (
     <main className="grid m-50 pl-50">
-      <div className="grid main shadow-md mt-20 mb-10 mx-20 gap-y-5">
-        <header className="grid grid-row row-span-full m-20 grid-cols-4">
+      <div className="grid main shadow-md mx-5 my-2 smartphone:mt-20 smartphone:mb-10 smartphone:mx-20 smartphone:gap-y-5">
+        <header className="grid grid-row row-span-full smartphone:m-20 grid-cols-4 p-10 smartphone:p-0">
           <div className="col-span-4">
-            <h1 className="name font-bold text-4xl col-span-3 inline pink mr-3">Theresa Summa</h1>
-            <h2 className="location col-span-1 inline text-2xl light-gray">Software Engineering Leader in the SF Bay Area</h2>
+            <h1 className="name font-bold text-4xl col-span-3 smartphone:inline pink mr-3">Theresa Summa</h1>
+            <h2 className="location col-span-1 smartphone:inline text-2xl light-gray">Software Engineering Leader in the SF Bay Area</h2>
           </div>
-          <nav className="contact col-span-4 list-none text-2xl mt-2">
-            <li className="telephone inline">
+          <nav className="contact col-span-4 list-none smartphone:text-2xl mt-2">
+            <li className="telephone smartphone:inline">
               <Link href="tel:3474150944" className="rounded p-1 mr-2"><FontAwesomeIcon icon={faPhoneVolume} className="mr-2" />347-415-0944</Link>
             </li>
-            <li className="email inline"><Link href="mailto:theresasumma@gmail.com" className="rounded p-1 mr-2"><FontAwesomeIcon icon={faEnvelope} className="mr-2" />theresasumma@gmail.com</Link></li>
-            <li className="linkedIn inline"><Link href="http://linkedin.com/in/theresasumma" className="rounded p-1 mr-2"><FontAwesomeIcon icon={faLinkedin} className="mr-2" />LinkedIn</Link></li>
-            <li className="github inline"><Link href="http://github.com/theresaanna" className="rounded p-1 mr-2"><FontAwesomeIcon icon={faGithub} className="mr-2" />Github</Link></li>
+            <li className="email smartphone:inline"><Link href="mailto:theresasumma@gmail.com" className="rounded p-1 mr-2"><FontAwesomeIcon icon={faEnvelope} className="mr-2" />theresasumma@gmail.com</Link></li>
+            <li className="linkedIn smartphone:inline"><Link href="http://linkedin.com/in/theresasumma" className="rounded p-1 mr-2"><FontAwesomeIcon icon={faLinkedin} className="mr-2" />LinkedIn</Link></li>
+            <li className="github smartphone:inline"><Link href="http://github.com/theresaanna" className="rounded p-1 mr-2"><FontAwesomeIcon icon={faGithub} className="mr-2" />Github</Link></li>
           </nav>
         </header>
       </div>
-      <div className="grid gap-y-2 mx-20 place-items-center no-print">
+      <div className="grid smartphone:gap-y-2 smartphone:mx-20 place-items-center no-print">
         <div className="grid-row">
-          <Image className="col-span-1 inline" src={dividerheart} width="200"/>
-          <Image className="col-span-2 inline" src={dividerheart} width="300"/>
-          <Image className="col-span-1 inline" src={dividerheart} width="200"/>
+          <Image className="smartphone:col-span-1 inline collapse smartphone:visible" src={dividerheart} width="200"/>
+          <Image className="smartphone:col-span-2 col-span-4 smartphone:inline" src={dividerheart} width="300"/>
+          <Image className="smartphone:col-span-1 inline collapse smartphone:visible" src={dividerheart} width="200"/>
         </div>
       </div>
-      <div className="grid main shadow-md mt-6 mb-20 mx-20 gap-y-10 grid-flow-col">
+      <div className="grid main shadow-md mx-5 my-2 smartphone:mt-6 smartphone:mb-20 smartphone:mx-20 smartphone:gap-y-10 grid-flow-cols">
         <div className="grid-row row-span-full m-20 grid-rows-3">
           <h3 className="panel-header text-2xl light-gray mb-3">Some of my skills</h3>
           <ul className="panel skills list-disc grid grid-rows-auto grid-cols-3 list-inside text-lg">
@@ -78,15 +78,15 @@ function Home() {
           </ul>
         </div>
       </div>
-      <div className="grid gap-y-2 mx-20 place-items-center no-print">
+      <div className="grid smartphone:gap-y-2 mt-5 smartphone:mx-20 place-items-center no-print">
         <div className="grid-row">
-          <Image className="col-span-1 inline divider-hack" src={dividersimple} width="200"/>
-          <Image className="col-span-2 mx-5 inline divider-hack" src={dividersimple} width="300"/>
-          <Image className="col-span-1 inline divider-hack" src={dividersimple} width="200"/>
+          <Image className="col-span-1 inline divider-hack collapse smartphone:visible" src={dividersimple} width="200"/>
+          <Image className="col-span-2 mx-5 smartphone:inline divider-hack" src={dividersimple} width="300"/>
+          <Image className="col-span-1 inline divider-hack collapse smartphone:visible" src={dividersimple} width="200"/>
         </div>
       </div>
-      <div className="grid main shadow-md m-20 gap-y-10">
-        <div className="grid grid-row row-span-full m-20">
+      <div className="grid main shadow-md mx-5 my-2 smartphone:mt-6 smartphone:mb-20 smartphone:mx-20 smartphone:gap-y-10 grid-flow-col">
+        <div className="grid-row row-span-full m-20 grid-rows-3">
           <h3 className="panel-header text-2xl light-gray mb-3">Professional experience: Government</h3>
           <div className="panel job grid grid-cols-8">
             <div className="col-span-4">
@@ -131,11 +131,11 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="grid gap-y-2 mx-20 place-items-center no-print">
-        <Image className="gap-x-4 col-span-4" src={keepgoingdivider} width="500" height="169"/>
+      <div className="grid smartphone:gap-y-2 mt-5 smartphone:mx-20 place-items-center no-print">
+        <Image className="gap-x-4 col-span-4 mt-5" src={keepgoingdivider} width="500" height="169"/>
       </div>
-      <div className="grid main shadow-md m-20 gap-y-10">
-        <div className="grid grid-row row-span-full m-20">
+      <div className="grid main shadow-md mx-5 my-2 smartphone:mt-6 smartphone:mb-20 smartphone:mx-20 smartphone:gap-y-10 grid-flow-col">
+        <div className="grid-row row-span-full m-20 grid-rows-3">
           <h3 className="panel-header text-2xl light-gray mb-3">Professional experience: Media Companies</h3>
           <div className="panel job grid grid-cols-8">
             <div className="col-span-4">
@@ -209,13 +209,13 @@ function Home() {
       </div>
       <div className="grid gap-y-2 mx-20 place-items-center no-print">
         <div className="grid-row">
-          <Image className="col-span-1 inline" src={dividerheartlight} width="200"/>
-          <Image className="col-span-2 inline" src={dividerheartlight} width="300"/>
-          <Image className="col-span-1 inline" src={dividerheartlight} width="200"/>
+          <Image className="col-span-1 inline collapse smartphone:visible" src={dividerheartlight} width="200"/>
+          <Image className="col-span-2 smarphone:inline" src={dividerheartlight} width="300"/>
+          <Image className="col-span-1 inline collapse smartphone:visible" src={dividerheartlight} width="200"/>
         </div>
       </div>
-      <div className="grid main shadow-md m-20 gap-y-10 mb-5 heart-bg no-print">
-        <div className="grid grid-row row-span-full m-20">
+      <div className="grid main heart-bg no-printshadow-md mx-5 my-2 smartphone:mt-6 smartphone:mb-20 smartphone:mx-20 smartphone:gap-y-10 grid-flow-col">
+        <div className="grid-row row-span-full m-20 grid-rows-3">
           <h3 className="panel-header text-2xl light-gray">Made wth Love</h3>
           <p>And built using <Link href="https://nextjs.org/">Next.js</Link>, <Link href="https://tailwindcss.com/">Tailwind CSS</Link>, <Link href="https://fonts.google.com/">Google Fonts</Link>, <Link href="https://github.com/theresaanna/pinkresume">Github</Link>. Illustrative elements are © 2024 Theresa Summa</p>
         </div>
