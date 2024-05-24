@@ -41,7 +41,7 @@ function Home() {
       </div>
       <div className="grid main shadow-md mx-5 my-2 smartphone:mt-6 smartphone:mb-10 smartphone:mx-20 smartphone:gap-y-10 grid-flow-cols">
         <div className="grid-row row-span-full m-20 grid-rows-3">
-          <h3 className="panel-header text-2xl light-gray mb-3">Some of my skills</h3>
+          <h3 className="panel-header text-2xl pink smartphone:text-3xl mb-5 border-dashed border-b">Some of my skills</h3>
           <ul className="panel skills list-disc grid grid-rows-auto grid-cols-3 list-inside text-sm gap-2 smartphone:text-lg">
             <li><Link href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics">JavaScript</Link></li>
             <li><Link href="https://react.dev/">React</Link></li>
@@ -87,7 +87,7 @@ function Home() {
       </div>
       <div className="grid main shadow-md mx-5 my-2 smartphone:mt-6 smartphone:mb-10 smartphone:mx-20 smartphone:gap-y-10 grid-flow-col">
         <div className="grid-row row-span-full m-20 grid-rows-3">
-          <h3 className="panel-header text-2xl light-gray mb-3">Professional experience: Government</h3>
+          <h3 className="panel-header text-2xl pink smartphone:text-3xl mb-5 border-dashed border-b">Professional experience: Government</h3>
           <div className="panel job grid grid-cols-8">
             <div className="col-span-4">
               <h4 className="text-3xl"><Link href="http://18f.gsa.gov">18F</Link></h4>
@@ -136,7 +136,7 @@ function Home() {
       </div>
       <div className="grid main shadow-md mx-5 my-2 smartphone:mt-6 smartphone:mb-20 smartphone:mx-20 smartphone:gap-y-10 grid-flow-col">
         <div className="grid-row row-span-full m-20 grid-rows-3">
-          <h3 className="panel-header text-2xl light-gray mb-3">Professional experience: Media Companies</h3>
+          <h3 className="panel-header text-2xl border-dashed border-b pink smartphone:text-3xl mb-5">Professional experience: Media Companies</h3>
           <div className="panel job grid grid-cols-8">
             <div className="col-span-4">
               <h4 className="text-3xl"><Link href="http://qz.com">Quartz</Link></h4>
@@ -216,7 +216,7 @@ function Home() {
       </div>
       <div className="grid main heart-bg no-printshadow-md mx-5 my-2 smartphone:mt-6 smartphone:mb-20 smartphone:mx-20 smartphone:gap-y-10 grid-flow-col">
         <div className="grid-row row-span-full m-20 grid-rows-3">
-          <h3 className="panel-header text-2xl light-gray">Made wth Love</h3>
+          <h3 className="panel-header text-2xl light-gray border-dashed border-b smartphone:text-3xl">Made wth Love</h3>
           <p>And built using <Link href="https://nextjs.org/">Next.js</Link>, <Link href="https://tailwindcss.com/">Tailwind CSS</Link>, <Link href="https://fonts.google.com/">Google Fonts</Link>, <Link href="https://github.com/theresaanna/pinkresume">Github</Link>. Illustrative elements are © 2024 Theresa Summa</p>
         </div>
       </div>

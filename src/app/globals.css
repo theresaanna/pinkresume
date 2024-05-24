@@ -71,6 +71,10 @@ a:hover, a:active {
   transform: rotate(5deg);
 }
 
+.panel-header {
+  border-bottom-color: rgb(var(--light-gray));
+}
+
 .heart-bg {
   background-image: url('./bgheart.png');
   background-repeat: no-repeat;
