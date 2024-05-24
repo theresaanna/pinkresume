@@ -32,7 +32,7 @@ function Home() {
           </nav>
         </header>
       </div>
-      <div className="grid gap-y-2 mx-20 place-items-center">
+      <div className="grid gap-y-2 mx-20 place-items-center no-print">
         <div className="grid-row">
           <Image className="col-span-1 inline" src={dividerheart} width="200"/>
           <Image className="col-span-2 inline" src={dividerheart} width="300"/>
@@ -78,7 +78,7 @@ function Home() {
           </ul>
         </div>
       </div>
-      <div className="grid gap-y-2 mx-20 place-items-center">
+      <div className="grid gap-y-2 mx-20 place-items-center no-print">
         <div className="grid-row">
           <Image className="col-span-1 inline divider-hack" src={dividersimple} width="200"/>
           <Image className="col-span-2 mx-5 inline divider-hack" src={dividersimple} width="300"/>
@@ -131,7 +131,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="grid gap-y-2 mx-20 place-items-center">
+      <div className="grid gap-y-2 mx-20 place-items-center no-print">
         <Image className="gap-x-4 col-span-4" src={keepgoingdivider} width="500" height="169"/>
       </div>
       <div className="grid main shadow-md m-20 gap-y-10">
@@ -207,20 +207,20 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="grid gap-y-2 mx-20 place-items-center">
+      <div className="grid gap-y-2 mx-20 place-items-center no-print">
         <div className="grid-row">
           <Image className="col-span-1 inline" src={dividerheartlight} width="200"/>
           <Image className="col-span-2 inline" src={dividerheartlight} width="300"/>
           <Image className="col-span-1 inline" src={dividerheartlight} width="200"/>
         </div>
       </div>
-      <div className="grid main shadow-md m-20 gap-y-10 mb-5 heart-bg">
+      <div className="grid main shadow-md m-20 gap-y-10 mb-5 heart-bg no-print">
         <div className="grid grid-row row-span-full m-20">
           <h3 className="panel-header text-2xl light-gray">Made wth Love</h3>
           <p>And built using <Link href="https://nextjs.org/">Next.js</Link>, <Link href="https://tailwindcss.com/">Tailwind CSS</Link>, <Link href="https://fonts.google.com/">Google Fonts</Link>, <Link href="https://github.com/theresaanna/pinkresume">Github</Link>. Illustrative elements are © 2024 Theresa Summa</p>
         </div>
       </div>
-      <div className="grid gap-y-2 mx-20 mb-10 place-items-end">
+      <div className="grid gap-y-2 mx-20 mb-10 place-items-end no-print">
         <Image className="gap-x-4 col-span-4" src={thankyoudivider} width="200" height="169"/>
       </div>
     </main>

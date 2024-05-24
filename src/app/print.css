@@ -1,0 +1,26 @@
+@media print {
+    .no-print{
+      display: none;
+    }
+
+    .main {
+      margin: 0;
+      padding: 0;
+    }
+
+    .shadow-md {
+      box-shadow: none;
+    }
+
+    .m-20 {
+      margin: .25rem;
+    }
+
+    .name, .location {
+      display: block;
+    }
+
+    .contact.text-2xl {
+      font-size: 1.25rem;
+    }
+}
