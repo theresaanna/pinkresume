@@ -181,7 +181,7 @@ function Home() {
           </div>
           <div className="panel job grid grid-cols-8 mt-20">
             <div className="col-span-4">
-              <h4 className="text-3xl"><Link href="http://economist.com">Sony Music</Link></h4>
+              <h4 className="text-3xl"><Link href="https://www.sonymusic.com/">Sony Music</Link></h4>
               <h5 className="title pink text-2xl mt-2">Drupal Themer</h5>
             </div>
             <div className="col-span-4">
