@@ -39,7 +39,7 @@ function Home() {
           <Image className="smartphone:col-span-1 inline collapse smartphone:visible" src={dividerheart} width="200"/>
         </div>
       </div>
-      <div className="grid main shadow-md mx-5 my-2 smartphone:mt-6 smartphone:mb-20 smartphone:mx-20 smartphone:gap-y-10 grid-flow-cols">
+      <div className="grid main shadow-md mx-5 my-2 smartphone:mt-6 smartphone:mb-10 smartphone:mx-20 smartphone:gap-y-10 grid-flow-cols">
         <div className="grid-row row-span-full m-20 grid-rows-3">
           <h3 className="panel-header text-2xl light-gray mb-3">Some of my skills</h3>
           <ul className="panel skills list-disc grid grid-rows-auto grid-cols-3 list-inside text-lg">
@@ -78,14 +78,14 @@ function Home() {
           </ul>
         </div>
       </div>
-      <div className="grid smartphone:gap-y-2 mt-5 smartphone:mx-20 place-items-center no-print">
+      <div className="grid smartphone:gap-y-2 mt-5 smartphone:mt-0 smartphone:mx-20 place-items-center no-print">
         <div className="grid-row">
-          <Image className="col-span-1 inline divider-hack collapse smartphone:visible" src={dividersimple} width="200"/>
-          <Image className="col-span-2 mx-5 smartphone:inline divider-hack" src={dividersimple} width="300"/>
-          <Image className="col-span-1 inline divider-hack collapse smartphone:visible" src={dividersimple} width="200"/>
+          <Image className="smartphone:col-span-1 inline divider-hack collapse smartphone:visible" src={dividersimple} width="200"/>
+          <Image className="smartphone:col-span-2 mx-5 smartphone:inline divider-hack" src={dividersimple} width="300"/>
+          <Image className="smartphone:col-span-1 inline divider-hack collapse smartphone:visible" src={dividersimple} width="200"/>
         </div>
       </div>
-      <div className="grid main shadow-md mx-5 my-2 smartphone:mt-6 smartphone:mb-20 smartphone:mx-20 smartphone:gap-y-10 grid-flow-col">
+      <div className="grid main shadow-md mx-5 my-2 smartphone:mt-6 smartphone:mb-10 smartphone:mx-20 smartphone:gap-y-10 grid-flow-col">
         <div className="grid-row row-span-full m-20 grid-rows-3">
           <h3 className="panel-header text-2xl light-gray mb-3">Professional experience: Government</h3>
           <div className="panel job grid grid-cols-8">
@@ -131,7 +131,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="grid smartphone:gap-y-2 mt-5 smartphone:mx-20 place-items-center no-print">
+      <div className="grid smartphone:gap-y-2 smartphone:mt-0 mt-5 smartphone:mx-20 place-items-center no-print">
         <Image className="gap-x-4 col-span-4 mt-5" src={keepgoingdivider} width="500" height="169"/>
       </div>
       <div className="grid main shadow-md mx-5 my-2 smartphone:mt-6 smartphone:mb-20 smartphone:mx-20 smartphone:gap-y-10 grid-flow-col">
@@ -209,9 +209,9 @@ function Home() {
       </div>
       <div className="grid gap-y-2 mx-20 place-items-center no-print">
         <div className="grid-row">
-          <Image className="col-span-1 inline collapse smartphone:visible" src={dividerheartlight} width="200"/>
-          <Image className="col-span-2 smarphone:inline" src={dividerheartlight} width="300"/>
-          <Image className="col-span-1 inline collapse smartphone:visible" src={dividerheartlight} width="200"/>
+          <Image className="smartphone:col-span-1 inline collapse smartphone:visible" src={dividerheartlight} width="200"/>
+          <Image className="smartphone:col-span-2 smartphone:inline" src={dividerheartlight} width="300"/>
+          <Image className="smartphone:col-span-1 inline collapse smartphone:visible" src={dividerheartlight} width="200"/>
         </div>
       </div>
       <div className="grid main heart-bg no-printshadow-md mx-5 my-2 smartphone:mt-6 smartphone:mb-20 smartphone:mx-20 smartphone:gap-y-10 grid-flow-col">
