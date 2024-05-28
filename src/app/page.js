@@ -152,7 +152,7 @@ function Home() {
           </div>
           <div className="panel job grid grid-cols-8 mt-20">
             <div className="col-span-4">
-              <h4 className="smartphone:text-3xl text-xl"><Link href="http://consumersearch.com">ConsumerSearch</Link></h4>
+              <h4 className="smartphone:text-3xl vsmall:text-md text-xl"><Link href="http://consumersearch.com">ConsumerSearch</Link></h4>
               <h5 className="title pink smartphone:text-2xl text-lg mt-2">Senior Web Developer</h5>
             </div>
             <div className="col-span-4">
