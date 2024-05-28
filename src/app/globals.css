@@ -10,11 +10,6 @@
   --beige: 232, 216, 201;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-  }
-}
-
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
