@@ -90,8 +90,8 @@ function Home() {
           <h3 className="panel-header text-2xl pink smartphone:text-3xl mb-5 border-dashed border-b">Professional experience: Government</h3>
           <div className="panel job grid grid-cols-8">
             <div className="col-span-4">
-              <h4 className="text-3xl"><Link href="http://18f.gsa.gov">18F</Link></h4>
-              <h5 className="title pink text-2xl mt-2">Lead Innovation Specialist</h5>
+              <h4 className="smartphone:text-3xl text-xl"><Link href="http://18f.gsa.gov">18F</Link></h4>
+              <h5 className="title pink smartphone:text-2xl text-lg mt-2">Lead Innovation Specialist</h5>
             </div>
             <div className="col-span-4">
               <div className="location text-lg smartphone:text-xl light-gray">Washington, DC and remote</div>
@@ -105,8 +105,8 @@ function Home() {
               <li className="mb-1">Co-authored Code of Conduct for events as part of internal Diversity and Inclusion Guild, which became the foundation for the <Link className="rounded" href="https://github.com/18F/code-of-conduct">organizational Code of Conduct</Link>.</li>
             </ul>
             <div className="col-span-4">
-              <h4 className="text-3xl"><Link href="http://18f.gsa.gov">18F</Link></h4>
-              <h5 className="title pink text-2xl mt-2">Innovation Specialist</h5>
+              <h4 className="smartphone:text-3xl text-xl"><Link href="http://18f.gsa.gov">18F</Link></h4>
+              <h5 className="title pink smartphone:text-2xl text-lg mt-2">Innovation Specialist</h5>
             </div>
             <div className="col-span-4">
               <div className="location text-lg smartphone:text-xl light-gray">Washington, DC and remote</div>
@@ -118,8 +118,8 @@ function Home() {
           </div>
           <div className="panel job grid grid-cols-8 mt-20">
             <div className="col-span-4">
-              <h4 className="text-3xl"><Link href="http://cfpb.gov">CFPB</Link></h4>
-              <h5 className="title pink text-2xl mt-2">Technology & Innovation Fellow</h5>
+              <h4 className="smartphone:text-3xl text-xl"><Link href="http://cfpb.gov">CFPB</Link></h4>
+              <h5 className="title pink smartphone:text-2xl text-lg mt-2">Technology & Innovation Fellow</h5>
             </div>
             <div className="col-span-4">
               <div className="location text-lg smartphone:text-xl light-gray">Washington, DC and remote</div>
@@ -139,8 +139,8 @@ function Home() {
           <h3 className="panel-header text-2xl border-dashed border-b pink smartphone:text-3xl mb-5">Professional experience: Media Companies</h3>
           <div className="panel job grid grid-cols-8">
             <div className="col-span-4">
-              <h4 className="text-3xl"><Link href="http://qz.com">Quartz</Link></h4>
-              <h5 className="title pink text-2xl mt-2">Web Application Engineer</h5>
+              <h4 className="smartphone:text-3xl text-xl"><Link href="http://qz.com">Quartz</Link></h4>
+              <h5 className="title pink smartphone:text-2xl text-lg mt-2">Web Application Engineer</h5>
             </div>
             <div className="col-span-4">
               <div className="location text-lg smartphone:text-xl light-gray">New York, NY</div>
@@ -152,8 +152,8 @@ function Home() {
           </div>
           <div className="panel job grid grid-cols-8 mt-20">
             <div className="col-span-4">
-              <h4 className="text-xl"><Link href="http://consumersearch.com">ConsumerSearch</Link></h4>
-              <h5 className="title pink text-2xl mt-2">Senior Web Developer</h5>
+              <h4 className="smartphone:text-3xl text-xl"><Link href="http://consumersearch.com">ConsumerSearch</Link></h4>
+              <h5 className="title pink smartphone:text-2xl text-lg mt-2">Senior Web Developer</h5>
             </div>
             <div className="col-span-4">
               <div className="location text-lg smartphone:text-xl light-gray">New York, NY</div>
@@ -167,8 +167,8 @@ function Home() {
           </div>
           <div className="panel job grid grid-cols-8 mt-20">
             <div className="col-span-4">
-              <h4 className="text-3xl"><Link href="http://economist.com">The Economist</Link></h4>
-              <h5 className="title pink text-2xl mt-2">Client Side Developer</h5>
+              <h4 className="smartphone:text-3xl text-xl"><Link href="http://economist.com">The Economist</Link></h4>
+              <h5 className="title pink smartphone:text-2xl text-lg mt-2">Client Side Developer</h5>
             </div>
             <div className="col-span-4">
               <div className="location text-lg smartphone:text-xl light-gray">New York, NY</div>
@@ -181,8 +181,8 @@ function Home() {
           </div>
           <div className="panel job grid grid-cols-8 mt-20">
             <div className="col-span-4">
-              <h4 className="text-3xl"><Link href="https://www.sonymusic.com/">Sony Music</Link></h4>
-              <h5 className="title pink text-2xl mt-2">Drupal Themer</h5>
+              <h4 className="smartphone:text-3xl text-xl"><Link href="https://www.sonymusic.com/">Sony Music</Link></h4>
+              <h5 className="title pink smartphone:text-2xl text-lg mt-2">Drupal Themer</h5>
             </div>
             <div className="col-span-4">
               <div className="location text-lg smartphone:text-xl light-gray">New York, NY</div>
@@ -194,8 +194,8 @@ function Home() {
           </div>
           <div className="panel job grid grid-cols-8 mt-20">
             <div className="col-span-4">
-              <h4 className="text-3xl"><Link href="http://observer.com">The New York Observer</Link></h4>
-              <h5 className="title pink text-2xl mt-2">Front End Developer</h5>
+              <h4 className="smartphone:text-3xl text-xl"><Link href="http://observer.com">The New York Observer</Link></h4>
+              <h5 className="title pink smartphone:text-2xl text-lg mt-2">Front End Developer</h5>
             </div>
             <div className="col-span-4">
               <div className="location text-lg smartphone:text-xl light-gray">New York, NY</div>
