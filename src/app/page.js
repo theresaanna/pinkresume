@@ -42,7 +42,7 @@ function Home() {
       <div className="grid main shadow-md mx-5 my-2 smartphone:mt-6 smartphone:mb-10 smartphone:mx-20 smartphone:gap-y-10 grid-flow-cols">
         <div className="grid-row row-span-full m-20 grid-rows-3">
           <h3 className="panel-header text-2xl pink smartphone:text-3xl mb-5 border-dashed border-b">Some of my skills</h3>
-          <ul className="panel skills list-disc grid grid-rows-auto grid-cols-3 list-inside text-sm gap-2 smartphone:text-lg">
+          <ul className="panel skills list-disc grid grid-rows-auto grid-cols-3 list-outside smartphone:list-inside text-sm gap-4 smartphone:text-lg">
             <li><Link href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics">JavaScript</Link></li>
             <li><Link href="https://react.dev/">React</Link></li>
             <li><Link href="https://sass-lang.com/">Sass</Link></li>
