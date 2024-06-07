@@ -20,6 +20,15 @@ export default function RootLayout({ children }) {
         <title>The Resume of Theresa Summa, Software Engineer and Engineering Leader</title>
         <link rel="stylesheet" href="print.css" media="print" onload="this.media='all'" />
       </head>
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-JSKZT4ET8L"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-JSKZT4ET8L');
+      </script>
       <body className={rethink.className}>{children}</body>
     </html>
   );
