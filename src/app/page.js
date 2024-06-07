@@ -19,16 +19,16 @@ function Home() {
       <div className="grid main shadow-md mx-5 my-2 smartphone:mt-20 smartphone:mb-10 smartphone:mx-20 smartphone:gap-y-5">
         <header className="grid grid-row row-span-full smartphone:m-20 vsmall:m-5 grid-cols-4 p-10 smartphone:p-0">
           <div className="col-span-4">
-            <h1 className="name font-bold text-4xl col-span-3 smartphone:inline pink mr-3">Theresa Summa</h1>
-            <h2 className="location col-span-1 smartphone:inline text-2xl light-gray">Software Engineering Leader in the SF Bay Area</h2>
+            <h1 className="name font-bold vsmall:text-3xl smartphone:text-4xl col-span-3 smartphone:inline pink mr-3">Theresa Summa</h1>
+            <h2 className="location col-span-1 smartphone:inline vsmall:text-xl smartphone:text-2xl light-gray">Software Engineering Leader in the SF Bay Area</h2>
           </div>
-          <nav className="contact col-span-4 list-none smartphone:text-2xl mt-2">
-            <li className="telephone smartphone:inline">
+          <nav className="contact col-span-4 list-none text-sm smartphone:text-2xl mt-2">
+            <li className="telephone smartphone:inline mb-2 smartphone:mb-0">
               <Link href="tel:3474150944" className="rounded p-1 mr-2"><FontAwesomeIcon icon={faPhoneVolume} className="mr-2" />347-415-0944</Link>
             </li>
-            <li className="email smartphone:inline"><Link href="mailto:theresasumma@gmail.com" className="rounded p-1 mr-2"><FontAwesomeIcon icon={faEnvelope} className="mr-2" />theresasumma@gmail.com</Link></li>
-            <li className="linkedIn smartphone:inline"><Link href="http://linkedin.com/in/theresasumma" className="rounded p-1 mr-2"><FontAwesomeIcon icon={faLinkedin} className="mr-2" />LinkedIn</Link></li>
-            <li className="github smartphone:inline"><Link href="http://github.com/theresaanna" className="rounded p-1 mr-2"><FontAwesomeIcon icon={faGithub} className="mr-2" />Github</Link></li>
+            <li className="email smartphone:inline mb-2 smartphone:mb-0"><Link href="mailto:theresasumma@gmail.com" className="rounded p-1 mr-2"><FontAwesomeIcon icon={faEnvelope} className="mr-2" />theresasumma@gmail.com</Link></li>
+            <li className="linkedIn smartphone:inline mb-2 smartphone:mb-0"><Link href="http://linkedin.com/in/theresasumma" className="rounded p-1 mr-2"><FontAwesomeIcon icon={faLinkedin} className="mr-2" />LinkedIn</Link></li>
+            <li className="github smartphone:inline mb-2 smartphone:mb-0"><Link href="http://github.com/theresaanna" className="rounded p-1 mr-2"><FontAwesomeIcon icon={faGithub} className="mr-2" />Github</Link></li>
           </nav>
         </header>
       </div>
