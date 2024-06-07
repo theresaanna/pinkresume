@@ -1,4 +1,5 @@
 import { Rethink_Sans } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import "./print.css";
 import { config } from '@fortawesome/fontawesome-svg-core';
@@ -20,14 +21,7 @@ export default function RootLayout({ children }) {
         <title>The Resume of Theresa Summa, Software Engineer and Engineering Leader</title>
         <link rel="stylesheet" href="print.css" media="print" onload="this.media='all'" />
       </head>
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-JSKZT4ET8L"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-JSKZT4ET8L');
-      </script>
+      <GoogleAnalytics gaId="G-JSKZT4ET8L" />
       <body className={rethink.className}>{children}</body>
     </html>
   );
