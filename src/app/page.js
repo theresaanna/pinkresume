@@ -17,7 +17,7 @@ function Home() {
   return (
     <main className="grid m-50 pl-50">
       <div className="grid main shadow-md mx-5 my-2 smartphone:mt-20 smartphone:mb-10 smartphone:mx-20 smartphone:gap-y-5">
-        <header className="grid grid-row row-span-full smartphone:m-20 grid-cols-4 p-10 smartphone:p-0">
+        <header className="grid grid-row row-span-full smartphone:m-20 vsmall:m-5 grid-cols-4 p-10 smartphone:p-0">
           <div className="col-span-4">
             <h1 className="name font-bold text-4xl col-span-3 smartphone:inline pink mr-3">Theresa Summa</h1>
             <h2 className="location col-span-1 smartphone:inline text-2xl light-gray">Software Engineering Leader in the SF Bay Area</h2>
@@ -40,7 +40,7 @@ function Home() {
         </div>
       </div>
       <div className="grid main shadow-md mx-5 my-2 smartphone:mt-6 smartphone:mb-10 smartphone:mx-20 smartphone:gap-y-10 grid-flow-cols">
-        <div className="grid-row row-span-full m-10 smartphone:m-20 grid-rows-3">
+        <div className="grid-row row-span-full m-10 smartphone:m-20  vsmall:m-5 grid-rows-3">
           <h3 className="panel-header text-2xl pink smartphone:text-3xl mb-5 border-dashed border-b">Some of my skills</h3>
           <ul className="panel skills list-disc grid grid-rows-auto grid-cols-3 list-outside smartphone:list-inside text-sm gap-4 smartphone:text-lg">
             <li><Link href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics">JavaScript</Link></li>
@@ -86,7 +86,7 @@ function Home() {
         </div>
       </div>
       <div className="grid main shadow-md mx-5 my-2 smartphone:mt-6 smartphone:mb-10 smartphone:mx-20 smartphone:gap-y-10 grid-flow-col">
-        <div className="grid-row row-span-full m-20 grid-rows-3">
+        <div className="grid-row row-span-full smartphone:m-20 vsmall:m-5 grid-rows-3 p-10 smartphone:p-0">
           <h3 className="panel-header text-2xl pink smartphone:text-3xl mb-5 border-dashed border-b">Professional experience: Government</h3>
           <div className="panel job grid grid-cols-8">
             <div className="col-span-4">
@@ -135,7 +135,7 @@ function Home() {
         <Image className="gap-x-4 col-span-4 mt-5" src={keepgoingdivider} width="500" height="169"/>
       </div>
       <div className="grid main shadow-md mx-5 my-2 smartphone:mt-6 smartphone:mb-20 smartphone:mx-20 smartphone:gap-y-10 grid-flow-col">
-        <div className="grid-row row-span-full m-20 grid-rows-3">
+        <div className="grid-row row-span-full smartphone:m-20 vsmall:m-5 grid-rows-3 p-10 smartphone:p-0">
           <h3 className="panel-header text-2xl border-dashed border-b pink smartphone:text-3xl mb-5">Professional experience: Media Companies</h3>
           <div className="panel job grid grid-cols-8">
             <div className="col-span-4">
@@ -215,7 +215,7 @@ function Home() {
         </div>
       </div>
       <div className="grid main heart-bg no-printshadow-md mx-5 my-2 smartphone:mt-6 smartphone:mb-20 smartphone:mx-20 smartphone:gap-y-10 grid-flow-col">
-        <div className="grid-row row-span-full m-20 grid-rows-3">
+        <div className="grid-row row-span-full smartphone:m-20 vsmall:m-5 grid-rows-3 p-10 smartphone:p-0">
           <h3 className="panel-header text-2xl light-gray border-dashed border-b smartphone:text-3xl">Made with Love</h3>
           <p>And built using <Link href="https://nextjs.org/">Next.js</Link>, <Link href="https://tailwindcss.com/">Tailwind CSS</Link>, <Link href="https://fonts.google.com/">Google Fonts</Link>, <Link href="https://github.com/theresaanna/pinkresume">Github</Link> and deployed with <Link href="https://vercel.com">Vercel</Link>. Illustrative elements are © 2024 Theresa Summa</p>
         </div>
