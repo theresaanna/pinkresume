@@ -19,8 +19,8 @@ function Home() {
       <div className="grid main shadow-md mx-5 my-2 smartphone:mt-20 smartphone:mb-10 smartphone:mx-20 smartphone:gap-y-5">
         <header className="grid grid-row row-span-full smartphone:m-20 vsmall:m-5 grid-cols-4 p-10 smartphone:p-0">
           <div className="col-span-4">
-            <h1 className="name font-bold vsmall:text-3xl smartphone:text-4xl col-span-3 smartphone:inline pink mr-3">Theresa Summa</h1>
-            <h2 className="location col-span-1 smartphone:inline vsmall:text-xl smartphone:text-2xl light-gray">Software Engineering Leader in the SF Bay Area</h2>
+            <h1 className="name font-bold text-3xl smartphone:text-4xl col-span-3 smartphone:inline pink mr-3">Theresa Summa</h1>
+            <h2 className="location col-span-1 smartphone:inline text-xl smartphone:text-2xl light-gray">Software Engineering Leader in the SF Bay Area</h2>
           </div>
           <nav className="contact col-span-4 list-none text-sm smartphone:text-2xl mt-2">
             <li className="telephone smartphone:inline mb-2 smartphone:mb-0">
