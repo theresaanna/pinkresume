@@ -85,6 +85,21 @@ function Home() {
           <Image className="smartphone:col-span-1 inline divider-hack collapse smartphone:visible" src={dividersimple} width="200"/>
         </div>
       </div>
+      <div className="grid main shadow-md mx-5 my-2 smartphone:mt-6 smartphone:mb-10 smartphone:mx-20 smartphone:gap-y-10 grid-flow-cols">
+        <div className="grid-row row-span-full m-10 smartphone:m-20 vsmall:m-5 grid-rows-3">
+          <h3 className="panel-header text-2xl pink smartphone:text-3xl mb-5 border-dashed border-b heart-bg little-heart-bg heart-bg-right">First, A Quick Note</h3>
+          <p className="text-lg my-3">I began my professional life much earlier than many, working full time in a pizzeria by 15 years old. <strong>Twenty years later</strong>, my brain and body told me it was time for a break.</p>
+          <p className="text-lg my-3">I experienced some health issues, but <strong>never stopped being an engineer</strong>. In fact, I have become a stronger engineer for the time off. I have continued to <strong>read the industry newsletters and blogs</strong>, I have been <strong>writing code</strong>, including for a <strong>computer science course</strong> I completed. I have <strong>become wiser, more confident</strong> And patient.</p>
+          <p className="text-lg my-3">I am a <strong>stronger leader</strong>, a <strong>sharper problem solver</strong> and reinvigorated to <strong>bring value to your project or team</strong>.</p>
+        </div>
+      </div>
+      <div className="grid smartphone:gap-y-2 mt-5 smartphone:mt-0 smartphone:mx-20 place-items-center no-print">
+        <div className="grid-row">
+          <Image className="smartphone:col-span-1 inline divider-hack collapse smartphone:visible" src={dividersimple} width="200"/>
+          <Image className="smartphone:col-span-2 mx-5 smartphone:inline divider-hack" src={dividersimple} width="300"/>
+          <Image className="smartphone:col-span-1 inline divider-hack collapse smartphone:visible" src={dividersimple} width="200"/>
+        </div>
+      </div>
       <div className="grid main shadow-md mx-5 my-2 smartphone:mt-6 smartphone:mb-10 smartphone:mx-20 smartphone:gap-y-10 grid-flow-col">
         <div className="grid-row row-span-full smartphone:m-20 vsmall:m-5 grid-rows-3 p-10 smartphone:p-0">
           <h3 className="panel-header text-2xl pink smartphone:text-3xl mb-5 border-dashed border-b heart-bg little-heart-bg heart-bg-right">Professional experience: Government</h3>
