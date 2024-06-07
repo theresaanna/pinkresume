@@ -73,6 +73,15 @@ a:hover, a:active {
   background-position: 1rem;
 }
 
+.little-heart-bg {
+  background-size: contain;
+  background-position: 0;
+}
+
+.heart-bg-right {
+  background-position: right;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

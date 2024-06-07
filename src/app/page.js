@@ -40,9 +40,9 @@ function Home() {
         </div>
       </div>
       <div className="grid main shadow-md mx-5 my-2 smartphone:mt-6 smartphone:mb-10 smartphone:mx-20 smartphone:gap-y-10 grid-flow-cols">
-        <div className="grid-row row-span-full m-10 smartphone:m-20  vsmall:m-5 grid-rows-3">
-          <h3 className="panel-header text-2xl pink smartphone:text-3xl mb-5 border-dashed border-b">Some of my skills</h3>
-          <ul className="panel skills list-disc grid grid-rows-auto grid-cols-3 list-outside smartphone:list-inside text-sm gap-4 smartphone:text-lg">
+        <div className="grid-row row-span-full m-10 smartphone:m-20 vsmall:m-5 grid-rows-3">
+          <ul className="panel skills list-disc grid grid-rows-auto grid-cols-3 list-inside text-sm gap-4 smartphone:text-lg">
+            <lh className="panel-header text-2xl pink smartphone:text-3xl mb-5 pl-10 border-dashed border-b col-span-full heart-bg little-heart-bg">Some of my skills</lh>
             <li><Link href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics">JavaScript</Link></li>
             <li><Link href="https://react.dev/">React</Link></li>
             <li><Link href="https://sass-lang.com/">Sass</Link></li>
@@ -87,7 +87,7 @@ function Home() {
       </div>
       <div className="grid main shadow-md mx-5 my-2 smartphone:mt-6 smartphone:mb-10 smartphone:mx-20 smartphone:gap-y-10 grid-flow-col">
         <div className="grid-row row-span-full smartphone:m-20 vsmall:m-5 grid-rows-3 p-10 smartphone:p-0">
-          <h3 className="panel-header text-2xl pink smartphone:text-3xl mb-5 border-dashed border-b">Professional experience: Government</h3>
+          <h3 className="panel-header text-2xl pink smartphone:text-3xl mb-5 border-dashed border-b heart-bg little-heart-bg heart-bg-right">Professional experience: Government</h3>
           <div className="panel job grid grid-cols-8">
             <div className="col-span-4">
               <h4 className="smartphone:text-3xl text-xl"><Link href="http://18f.gsa.gov">18F</Link></h4>
@@ -136,7 +136,7 @@ function Home() {
       </div>
       <div className="grid main shadow-md mx-5 my-2 smartphone:mt-6 smartphone:mb-20 smartphone:mx-20 smartphone:gap-y-10 grid-flow-col">
         <div className="grid-row row-span-full smartphone:m-20 vsmall:m-5 grid-rows-3 p-10 smartphone:p-0">
-          <h3 className="panel-header text-2xl border-dashed border-b pink smartphone:text-3xl mb-5">Professional experience: Media Companies</h3>
+          <h3 className="panel-header text-2xl border-dashed border-b pink smartphone:text-3xl mb-5 heart-bg little-heart-bg heart-bg-right">Professional experience: Media Companies</h3>
           <div className="panel job grid grid-cols-8">
             <div className="col-span-4">
               <h4 className="smartphone:text-3xl text-xl"><Link href="http://qz.com">Quartz</Link></h4>
