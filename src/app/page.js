@@ -100,7 +100,7 @@ function Home() {
           <Image className="smartphone:col-span-1 inline divider-hack collapse smartphone:visible" src={dividersimple} width="200"/>
         </div>
       </div>
-      <div className="grid main shadow-md mx-5 my-2 smartphone:mt-6 smartphone:mb-10 smartphone:mx-20 smartphone:gap-y-10 grid-flow-col">
+      <div className="job-group grid main shadow-md mx-5 my-2 smartphone:mt-6 smartphone:mb-10 smartphone:mx-20 smartphone:gap-y-10 grid-flow-col">
         <div className="grid-row row-span-full smartphone:m-20 vsmall:m-5 grid-rows-3 p-10 smartphone:p-0">
           <h3 className="panel-header text-2xl pink smartphone:text-3xl mb-5 border-dashed border-b heart-bg little-heart-bg heart-bg-right">Professional experience: Government</h3>
           <div className="panel job grid grid-cols-8">
@@ -149,7 +149,7 @@ function Home() {
       <div className="grid smartphone:gap-y-2 smartphone:mt-0 mt-5 smartphone:mx-20 place-items-center no-print">
         <Image className="gap-x-4 col-span-4 mt-5" src={keepgoingdivider} width="500" height="169"/>
       </div>
-      <div className="grid main shadow-md mx-5 my-2 smartphone:mt-6 smartphone:mb-20 smartphone:mx-20 smartphone:gap-y-10 grid-flow-col">
+      <div className="job-group grid main shadow-md mx-5 my-2 smartphone:mt-6 smartphone:mb-20 smartphone:mx-20 smartphone:gap-y-10 grid-flow-col">
         <div className="grid-row row-span-full smartphone:m-20 vsmall:m-5 grid-rows-3 p-10 smartphone:p-0">
           <h3 className="panel-header text-2xl border-dashed border-b pink smartphone:text-3xl mb-5 heart-bg little-heart-bg heart-bg-right">Professional experience: Media Companies</h3>
           <div className="panel job grid grid-cols-8">
@@ -229,7 +229,7 @@ function Home() {
           <Image className="smartphone:col-span-1 inline collapse smartphone:visible" src={dividerheartlight} width="200"/>
         </div>
       </div>
-      <div className="grid main heart-bg no-printshadow-md mx-5 my-2 smartphone:mt-6 smartphone:mb-20 smartphone:mx-20 smartphone:gap-y-10 grid-flow-col">
+      <div className="grid main heart-bg no-printshadow-md mx-5 my-2 smartphone:mt-6 smartphone:mb-20 smartphone:mx-20 smartphone:gap-y-10 grid-flow-col no-print">
         <div className="grid-row row-span-full smartphone:m-20 vsmall:m-5 grid-rows-3 p-10 smartphone:p-0">
           <h3 className="panel-header text-2xl light-gray border-dashed border-b smartphone:text-3xl">Made with Love</h3>
           <p>And built using <Link href="https://nextjs.org/">Next.js</Link>, <Link href="https://tailwindcss.com/">Tailwind CSS</Link>, <Link href="https://fonts.google.com/">Google Fonts</Link>, <Link href="https://github.com/theresaanna/pinkresume">Github</Link> and deployed with <Link href="https://vercel.com">Vercel</Link>. Illustrative elements are © 2024 Theresa Summa</p>
