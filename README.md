@@ -1,3 +1,8 @@
+# Theresa's Resume
+This is not currently a good indicator of anything technical. It's not yet even properly templatized/componentized. 
+
+---
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
