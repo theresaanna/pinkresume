@@ -9,6 +9,10 @@ function Home() {
   return (
     <main className="grid">
       <div className="main">
+        <div className="skip-link">
+          <a href="#resume">Skip to Resume</a>
+        </div>
+
         <div className="letter">
           <strong>
             Hi.<br/>
@@ -35,7 +39,10 @@ function Home() {
           <p>Thanks for reading. Please let me know if you know of any roles that I could bring value to.</p>
         </div>
 
+        <hr/>
+
         <div className="resume">
+          <h1><a name="resume">My Experience</a></h1>
           <div className="job">
             <strong>18F/Technology Transformation Services, General Services Administration</strong><br/>
             <strong>Lead Innovation Specialist - Washington, DC</strong>

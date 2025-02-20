@@ -19,12 +19,10 @@ a:link, a:visited, a:active {
 }
 
 header a:hover, a:active {
-  background-image: url('./linkbg.png');
   border-bottom: none;
 }
 
 a:hover, a:active {
-  background-image: url('./linkbgheart.png');
   border-bottom: none;
   background-repeat: no-repeat;
 }
@@ -37,28 +35,24 @@ a:hover, a:active {
   visibility: collapse;
 }
 
-.beige {
-  color: rgb(var(--beige));
+p {
+  margin: 1em 0;
 }
 
-.pink {
-  color: rgb(var(--background-end-rgb));
+ul {
+  list-style: circle;
+  margin: auto;
+  padding: 1rem;
 }
 
-.light-gray {
-  color: rgb(var(--light-gray));
-}
-
-.job a {
+h1 {
+  margin: 1rem 0;
   font-weight: bold;
+  font-size: 1.5rem;
 }
 
-.divider-hack {
-  transform: rotate(5deg);
-}
-
-.panel-header {
-  border-bottom-color: rgb(var(--light-gray));
+.skip-link {
+  float: right;
 }
 
 @layer utilities {
