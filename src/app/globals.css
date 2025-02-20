@@ -11,15 +11,17 @@
 }
 
 body {
- margin: 0 10%;
+ margin: 0 25%;
+ border-left: 1px solid;
+ padding-left: .5rem;
+}
+
+a {
+  font-weight: bold;
 }
 
 a:link, a:visited, a:active {
   border-bottom: 1px solid rgb(var(--light-gray));
-}
-
-header a:hover, a:active {
-  border-bottom: none;
 }
 
 a:hover, a:active {
@@ -36,7 +38,7 @@ a:hover, a:active {
 }
 
 p {
-  margin: 1em 0;
+  margin: 1rem 0;
 }
 
 ul {
@@ -49,6 +51,11 @@ h1 {
   margin: 1rem 0;
   font-weight: bold;
   font-size: 1.5rem;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 1.25rem;
 }
 
 .skip-link {
