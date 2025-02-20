@@ -1,55 +1,11 @@
 @media print {
-    .no-print{
-      display: none;
-    }
+  :root {
+    --green: #536878; /* gray */
+  }
 
-    .main {
-      margin: 0 !important;
-      padding: 0 !important;
-    }
-
-    .grid-row,
-    .job-group .grid-row {
-      margin: .5rem 0 0 0;
-      padding: 0;
-    }
-
-    .job-group,
-    .job {
-      margin: 0;
-    }
-
-    .main header,
-    .panel-header {
-      padding: 0;
-      margin: .5rem 0 0 0;
-    }
-
-    nav.contact li {
-      display: inline;
-    }
-
-    .skills.gap-4 {
-      gap: 0;
-    }
-
-    .shadow-md {
-      box-shadow: none;
-    }
-
-    .m-20 {
-      margin: .25rem;
-    }
-
-    .name, .location {
-      display: block;
-    }
-
-    .contact.text-2xl {
-      font-size: 1.25rem;
-    }
-
-    .heart-bg {
-      padding-left: 0 !important;
-    }
+  body {
+    margin: 0 1rem;
+    padding: 0 .5rem;
+    border: 0;
+  }
 }
