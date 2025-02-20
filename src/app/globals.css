@@ -11,13 +11,7 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+ margin: 0 10%;
 }
 
 a:link, a:visited, a:active {
@@ -65,21 +59,6 @@ a:hover, a:active {
 
 .panel-header {
   border-bottom-color: rgb(var(--light-gray));
-}
-
-.heart-bg {
-  background-image: url('./bgheart.png');
-  background-repeat: no-repeat;
-  background-position: 1rem;
-}
-
-.little-heart-bg {
-  background-size: contain;
-  background-position: 0;
-}
-
-.heart-bg-right {
-  background-position: right;
 }
 
 @layer utilities {
