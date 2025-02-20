@@ -1,16 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FontAwesomeIcon } from '@fortawesome/React-fontawesome'
-import { faPhoneVolume, faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
-
 
 function Home() {
   return (
     <main className="grid">
       <div className="main">
         <div className="skip-link">
-          <a href="#resume">Skip to Resume</a>
+          <a href="#resume">Skip to Resume</a> | <a href="#contact">Contact</a>
         </div>
 
         <div className="letter">
@@ -42,7 +38,7 @@ function Home() {
 
         <div className="resume">
           <div className="skip-link">
-            <a href="#letter">Go back to letter</a>
+            <a href="#letter">Skip to Letter</a> | <a href="#contact">Contact</a>
           </div>
           <h1><a name="resume">My Experience</a></h1>
           <div className="job">
@@ -116,6 +112,17 @@ housing crisis off the ground technologically.</p>
              <li>Built the front end of two versions of a high traffic media website using <a href="https://new.drupal.org/home">Drupal</a>, <a href="https://www.php.net/">PHP</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a>.</li>
             </ul>
           </div>
+        </div>
+
+        <div className="contact">
+          <div className="skip-link">
+            <a href="#letter">Back to Letter</a> | <a href="#resume">Resume</a>
+          </div>
+          <h1><a name="contact">Contact Info</a></h1>
+          <ul>
+            <li><a href="mailto:theresasumma@gmail.com">theresasumma@gmail.com</a></li>
+            <li>Text only: <a href="tel:13474150944">+1-347-415-0944</a></li>
+          </ul>
         </div>
       </div>
     </main>
