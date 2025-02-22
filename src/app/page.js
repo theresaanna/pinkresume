@@ -1,6 +1,9 @@
+import { Analytics } from "@vercel/analytics/react"
+
 function Home() {
   return (
     <main>
+      <Analytics />
       <div className="main">
         <div class="star-container">
           <div class="star-menu">
