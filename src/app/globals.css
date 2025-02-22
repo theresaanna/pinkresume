@@ -4,16 +4,20 @@
 
 :root {
   --blue: #003262;
-  --gray: #BEBFC5;
+  --gray: #6b7680;
   --green: #00FFBF;
 }
 
 body {
- margin: 0 25%;
- border-left: 1px solid var(--green);
- padding-left: .5rem;
- background-color: var(--blue);
- color: #fff;
+  background-color: var(--blue);
+}
+
+.main {
+  margin: 0 25%;
+  color: #fff;
+  z-index: 1;
+  position: relative;
+  top: 0;
 }
 
 strong {
@@ -31,11 +35,6 @@ a:link, a:visited, a:active {
 
 a:hover, a:active {
   border-bottom: none;
-  background-repeat: no-repeat;
-}
-
-.hide-text {
-  visibility: collapse;
 }
 
 p {
@@ -61,12 +60,43 @@ h2 {
   color: var(--green);
 }
 
-.skip-link {
-  float: right;
+.body {
+  z-index: 1;
+  background-color: var(--blue);
+  border-left: 1px solid var(--green);
+  padding-left: .5rem;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.star-container {
+  position: sticky;
+  top: 0;
+  z-index: -1;
+}
+
+.star-menu {
+  background-image: url("./img/star.svg");
+  background-repeat: no-repeat;
+  width: 256px;
+  height: 256px;
+  position: absolute;
+  transform: rotate(-20deg);
+  float: left;
+  left: -156px;
+
+  .star-nav {
+    list-style: none;
+    margin-top: 118px;
+    margin-left: 80px;
+    transform: rotate(20deg);
+
+    li { 
+      a {
+        color: var(--blue);
+        border: 0;
+      }
+      a:hover {
+        border-bottom: 1px solid var(--gray);
+      }
+    }
   }
 }
