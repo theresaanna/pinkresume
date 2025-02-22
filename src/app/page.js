@@ -1,9 +1,11 @@
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 function Home() {
   return (
     <main>
       <Analytics />
+      <SpeedInsights />
       <div className="main">
         <div class="star-container">
           <div class="star-menu">
