@@ -1,27 +1,25 @@
 "use client"
-import React, { useRef } from 'react';
-import { motion, useInView } from 'motion/react';
+import React, { useRef, useState, useEffect } from 'react';
+import { motion, useInView, useScroll } from 'motion/react';
 
-const Paragraph = ({ text }) => {
+const Paragraph = ({ text, hasScrolled }) => {
 	const ref = useRef(null);
 	const isInView = useInView(ref, {
     	once: false, 
-    	margin: '0px 0px -100px 0px'
+    	margin: '0px 0px -200px 0px'
   	});
 
   	const variants = {
 	    hidden: {
 	      scale: 1,
 	      x: 0,
-	      opacity: 0.7,
 	      transition: {
 	        duration: 0.3
 	      }
 	    },
 	    visible: {
 	      scale: 1.1,
-	      x: 20,
-	      opacity: 1,
+	      x: 50,
 	      transition: {
 	        duration: 0.3,
 	        ease: 'easeOut'
@@ -29,19 +27,24 @@ const Paragraph = ({ text }) => {
 	    }
 	  };
 
+const animationState = hasScrolled && isInView ? 'visible' : 'hidden';
+
+
 return (
     <motion.p
       ref={ref}
       variants={variants}
       initial="hidden"
-      animate={isInView ? 'visible' : 'hidden'}
-    >
+      animate={animationState}
+		>
       {text}
     </motion.p>
   );
  };
 
  const AnimatedParagraphs = () => {
+ 	  const [hasScrolled, setHasScrolled] = useState(false);
+  	const { scrollY } = useScroll();
   	const paragraphs = [
         <><strong>I am a software engineer and engineering manager.</strong> I’ve been out of work almost seven years due to disability and then, frankly, because my resume gap puts off employers.</>,
         <>I am back and better than ever, and I just need ONE shot. Just one company. <strong>Let me tell you why you should bet on me.</strong></>,
@@ -55,16 +58,20 @@ return (
         <><strong>Thanks for reading.</strong> Please let me know if you know of any roles that I could bring value to.</>
   	];
 
+  	useEffect(() => {
+	    const unsubscribe = scrollY.on('change', (y) => {
+	      if (y > 0 && !hasScrolled) {
+	        setHasScrolled(true);
+	    	}
+    	});
+
+    	return () => unsubscribe();
+  	}, [scrollY, hasScrolled]);
+
   	return (
-	    <div className='letter' style={{ 
-	      minHeight: '200vh', // Ensure we have enough scroll space
-	      display: 'flex',
-	      flexDirection: 'column',
-	      alignItems: 'center',
-	      transformOrigin: 'left'
-	    }}>
+	    <div className='letter'>
 	      {paragraphs.map((text, index) => (
-	        <Paragraph key={index} text={text} />
+	        <Paragraph key={index} text={text} hasScrolled={hasScrolled} />
 	      ))}
 	    </div>
 	);
