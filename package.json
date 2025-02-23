@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "overrides": {
-    "next-intl": {
+    "@next/third-parties": {
       "next": "^15.0.0"
     }
   },
