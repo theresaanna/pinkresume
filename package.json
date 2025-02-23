@@ -10,7 +10,7 @@
   },
   "overrides": {
     "next-intl": {
-      "next": "$next"
+      "next": "^15.0.0"
     }
   },
   "dependencies": {
