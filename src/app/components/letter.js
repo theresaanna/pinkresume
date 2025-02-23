@@ -29,7 +29,6 @@ const Paragraph = ({ text, hasScrolled }) => {
 
 const animationState = hasScrolled && isInView ? 'visible' : 'hidden';
 
-
 return (
     <motion.p
       ref={ref}

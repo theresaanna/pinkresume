@@ -22,9 +22,7 @@ function Home() {
           <strong><a name="letter">Hi.</a></strong><br/>
           <h2>My name is Theresa.</h2>
           <h1>This is my open cover letter and resume.</h1>
-
           <AnimatedParagraphs/>
-
           <hr/>
 
           <div className="resume">
@@ -107,6 +105,8 @@ function Home() {
             <ul>
               <li><a href="mailto:theresasumma@gmail.com">theresasumma@gmail.com</a></li>
               <li>Text only: <a href="tel:13474150944">+1-347-415-0944</a></li>
+              <li><a href="https://github.com/theresaanna">Github</a></li>
+              <li><a href="https://linkedin.com/in/theresasumma">LinkedIn</a></li>
             </ul>
           </div>
         </div>
