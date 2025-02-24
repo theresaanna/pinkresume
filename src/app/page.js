@@ -15,6 +15,7 @@ function Home() {
              <li><a href="#letter">Letter</a></li>
              <li><a href="#resume">Resume</a></li>
              <li><a href="#contact">Contact</a></li>
+             <li><a href="#about">About</a></li>
             </nav>
          </div>
         </div>
@@ -99,14 +100,26 @@ function Home() {
               </ul>
             </div>
           </div>
+          <hr/>
 
           <div className="contact">
-            <h1><a name="contact">Contact Info</a></h1>
+            <h1><a name="contact">Contact</a></h1>
             <ul>
               <li><a href="mailto:theresasumma@gmail.com">theresasumma@gmail.com</a></li>
               <li>Text only: <a href="tel:13474150944">+1-347-415-0944</a></li>
               <li><a href="https://github.com/theresaanna">Github</a></li>
               <li><a href="https://linkedin.com/in/theresasumma">LinkedIn</a></li>
+            </ul>
+          </div>
+          <hr/>
+
+          <div className="about">
+            <h1><a name="about">About</a></h1>
+            About Theresa and this site:
+            <ul>
+              <li>This site is built with <a href="https://nextjs.org/">Next.js</a> and hosted with <a href="https://vercel.com/">Vercel</a>. Super great host, insanely easy to setup and deploy, I never have fluke failed builds.</li>
+              <li>On <a href="https://en.wikipedia.org/wiki/MacOS">MacOS</a>, I tested out <a href="https://www.warp.dev/">Warp</a> for an AI-powered Terminal replacement. I am using <a href="https://www.sublimetext.com/">Sublime Text</a>, but might try out <a href="https://www.jetbrains.com/webstorm/">WebStorm</a>. Never met an IDE I like, though. Warp was handy when I botched my Git history and when I ran into dependency versioning issues.</li>
+              <li>Theresa is a crafter, thinker, cat mom, reluctant TikTok-er, Lady Gaga superfan, into feminine dress and accoutrements, lifelong tinkerer.</li>
             </ul>
           </div>
         </div>

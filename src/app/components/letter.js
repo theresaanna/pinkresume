@@ -19,7 +19,7 @@ const Paragraph = ({ text, hasScrolled }) => {
 	    },
 	    visible: {
 	      scale: 1.1,
-	      x: 50,
+	      x: 40,
 	      transition: {
 	        duration: 0.3,
 	        ease: 'easeOut'
