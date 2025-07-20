@@ -23,17 +23,6 @@ function Home() {
           <strong><a name="letter">Hi.</a></strong><br/>
           <h2>My name is Theresa.</h2>
           <h1>This is my open cover letter and resume.</h1>
-            <div className="update">
-                <p><strong>3/24/2025</strong></p>
-
-                <p><strong>Update:</strong> as Elon Musk has decided to take down all examples and traces of work I did for the federal government, I started writing an example app this month.</p>
-
-                <p>It’s called <a href="https://tacktile.app">Tacktile</a> and it is a todo organization app! I have a great many visions for it, but I’ve just been getting a basic offering in place these past couple weeks.</p>
-
-                <p>It is very not visually finished, and you may find bugs, but feel free to login, add tasks, interact a bit with the UI. Most importantly, see the source code at <a href="https://github.com/theresaanna/tacktile/tree/main/src/app">Github</a>.</p>
-
-                <p>The code is the point, and I hope it will help employers understand the value I can bring to a team. Thanks for taking a look! Feel free to submit any critical bugs as tickets on the repository if you’d be so kind if you find any.</p>
-            </div>
           <AnimatedParagraphs/>
           <hr/>
 
