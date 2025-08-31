@@ -107,3 +107,34 @@ p {
 .update {
   border-bottom: 1px solid var(--green);
 }
+
+/* Add this to your globals.css */
+
+.comments-section {
+  margin: 2rem 0;
+  padding: 1rem 0;
+  border-top: 1px solid var(--green);
+}
+
+.comments-section h2 {
+  margin-bottom: 1rem;
+  color: var(--green);
+}
+
+/* Custom Giscus theme overrides */
+.giscus, .giscus-frame {
+  width: 100%;
+}
+
+/* Override Giscus colors to match your theme */
+:root {
+  --giscus-primary: var(--green);
+  --giscus-primary-hover: #00e6ac;
+}
+
+/* Print styles - hide comments when printing */
+@media print {
+  .comments-section {
+    display: none;
+  }
+}

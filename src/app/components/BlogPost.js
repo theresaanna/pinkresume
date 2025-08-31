@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import SimpleMarkdown from './SimpleMarkdown';
+import Comments from "./components/Comments";
 
 const BlogPost = ({ post }) => {
   return (
@@ -12,7 +13,10 @@ const BlogPost = ({ post }) => {
       <div className="blog-content">
         <SimpleMarkdown content={post.content} />
       </div>
-
+        <div className="comments">
+            <h2><a name="comments">Comments</a></h2>
+            <Comments />
+        </div>
       <footer className="blog-footer">
         <Link href="/blog" className="back-link">
           ← Back to blog
