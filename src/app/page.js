@@ -1,7 +1,10 @@
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import BlogList, { getBlogPosts } from "./components/blog-list"
 
-function Home() {
+async function Home() {
+    const posts = await getBlogPosts();
+
   return (
     <main>
       <Analytics />
@@ -21,8 +24,8 @@ function Home() {
           <strong><a name="letter">Hi.</a></strong><br/>
           <h2>My name is Theresa Summa.</h2>
             <h3>I am a software engineer.</h3>
-          <h1>This is my resume.</h1>
-
+          <BlogList posts={posts} />
+          <hr/>
           <div className="resume">
             <h1><a name="resume">My Experience</a></h1>
             <div className="job">
