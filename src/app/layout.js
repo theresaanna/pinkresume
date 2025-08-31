@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <title>The Resume of Theresa Summa, Software Engineer and Engineering Leader</title>
-        <link rel="stylesheet" href="print.css" media="print" onload="this.media='all'" />
+        <link rel="stylesheet" href="print.css" media="print" onLoad="this.media='all'" />
       </head>
       <GoogleAnalytics gaId="G-JSKZT4ET8L" />
       <body className={rethink.className}>{children}</body>

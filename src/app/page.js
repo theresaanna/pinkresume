@@ -1,11 +1,6 @@
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
-import AnimatedParagraphs from "./components/letter"
-import LinkedInPosts from "./components/linkedin"
-import Link from "next/link";
-
-
 function Home() {
   return (
     <main>
@@ -15,8 +10,7 @@ function Home() {
         <div className="star-container">
           <div className="star-menu">
             <nav className="star-nav">
-             <li><a href="#letter">Letter</a></li>
-             <li><a href="#blog">LinkedIn Blog</a></li>
+             <li><a href="/blog">Writing</a></li>
              <li><a href="#resume">Resume</a></li>
              <li><a href="#contact">Contact</a></li>
              <li><a href="#about">About</a></li>
@@ -25,15 +19,9 @@ function Home() {
         </div>
         <div className="body">
           <strong><a name="letter">Hi.</a></strong><br/>
-          <h2>My name is Theresa.</h2>
-          <h1>This is my open cover letter and resume.</h1>
-          <AnimatedParagraphs/>
-          <hr/>
-            <div id="blog" className="blog">
-                <h2>LinkedIn Posts</h2>
-                <LinkedInPosts/>
-            </div>
-            <hr/>
+          <h2>My name is Theresa Summa.</h2>
+            <h3>I am a software engineer.</h3>
+          <h1>This is my resume.</h1>
 
           <div className="resume">
             <h1><a name="resume">My Experience</a></h1>
