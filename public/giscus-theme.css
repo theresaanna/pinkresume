@@ -1,0 +1,58 @@
+/* Save this as public/giscus-theme.css for external theme loading */
+
+:root {
+  /* Your site colors */
+  --blue: #003262;
+  --gray: #6b7680;
+  --green: #00FFBF;
+  --white: #ffffff;
+}
+
+/* Main Giscus container */
+main {
+  --color-canvas-default: var(--blue);
+  --color-canvas-overlay: var(--blue);
+  --color-canvas-inset: #002147;
+  --color-canvas-subtle: #002147;
+
+  --color-fg-default: var(--white);
+  --color-fg-muted: var(--gray);
+  --color-fg-subtle: var(--white);
+  --color-fg-on-emphasis: var(--blue);
+
+  --color-border-default: var(--green);
+  --color-border-muted: var(--gray);
+
+  --color-accent-fg: var(--green);
+  --color-accent-emphasis: var(--green);
+
+  --color-btn-text: var(--green);
+  --color-btn-bg: transparent;
+  --color-btn-border: var(--green);
+  --color-btn-hover-bg: rgba(0, 255, 191, 0.1);
+  --color-btn-primary-text: var(--blue);
+  --color-btn-primary-bg: var(--green);
+  --color-btn-primary-border: var(--green);
+
+  --color-input-bg: #002147;
+  --color-input-border: var(--green);
+  --color-primer-shadow-focus: 0 0 0 3px rgba(0, 255, 191, 0.3);
+}
+
+/* Ensure all text elements follow your theme */
+* {
+  color-scheme: dark;
+}
+
+.markdown-body strong {
+  color: var(--green) !important;
+}
+
+.markdown-body a {
+  color: var(--green) !important;
+  border-bottom: 1px solid var(--gray) !important;
+}
+
+.markdown-body a:hover {
+  border-bottom: none !important;
+}
