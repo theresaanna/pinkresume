@@ -1,33 +1,34 @@
-import { getAllPosts } from '../../data/posts';
-import BlogList from '../components/BlogList';
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+import Link from "next/link";
 
-export const metadata = {
-  title: 'Theresa Summa',
-  description: 'Software Development Writing',
-};
+export default function BlogIndex() {
+  const postsDir = path.join(process.cwd(), "src/content/blog");
+  const files = fs.readdirSync(postsDir);
 
-export default function BlogPage() {
-  const posts = getAllPosts();
+  const posts = files.map((filename) => {
+    const filePath = path.join(postsDir, filename);
+    const fileContent = fs.readFileSync(filePath, "utf8");
+    const { data } = matter(fileContent);
+
+    const slug = filename.replace(/\.md$/, "");
+    return { slug, ...data };
+  });
 
   return (
-    <main>
-      <div className="main">
-        <div className="star-container">
-          <div className="star-menu">
-            <nav className="star-nav">
-             <li><a href="/#letter">Letter</a></li>
-             <li><a href="/#resume">Resume</a></li>
-             <li><a href="/blog">Blog</a></li>
-             <li><a href="/#contact">Contact</a></li>
-             <li><a href="/#about">About</a></li>
-            </nav>
-         </div>
-        </div>
-        <div className="body">
-          <h1>Writings</h1>
-          <BlogList posts={posts} />
-        </div>
-      </div>
-    </main>
+    <div className="max-w-3xl mx-auto p-8">
+      <h1 className="text-3xl font-bold mb-6">📚 Blog</h1>
+      <ul className="space-y-4">
+        {posts.map((post) => (
+          <li key={post.slug}>
+            <Link href={`/blog/${post.slug}`} className="text-blue-600 hover:underline">
+              {post.title}
+            </Link>
+            <p className="text-sm text-gray-500">{new Date(post.date).toDateString()}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
