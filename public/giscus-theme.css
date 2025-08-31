@@ -1,58 +1,233 @@
-/* Save this as public/giscus-theme.css for external theme loading */
+/* Theresa's Blue/Green/White Giscus Theme */
+/* Save this as public/giscus-theresa-theme.css */
 
-:root {
-  /* Your site colors */
-  --blue: #003262;
-  --gray: #6b7680;
-  --green: #00FFBF;
-  --white: #ffffff;
-}
-
-/* Main Giscus container */
 main {
-  --color-canvas-default: var(--blue);
-  --color-canvas-overlay: var(--blue);
+  /* Your site's blue/green/white color scheme */
+  --color-canvas-default: #003262;
+  --color-canvas-overlay: #003262;
   --color-canvas-inset: #002147;
   --color-canvas-subtle: #002147;
 
-  --color-fg-default: var(--white);
-  --color-fg-muted: var(--gray);
-  --color-fg-subtle: var(--white);
-  --color-fg-on-emphasis: var(--blue);
+  /* Text colors */
+  --color-fg-default: #ffffff;
+  --color-fg-muted: #6b7680;
+  --color-fg-subtle: #ffffff;
+  --color-fg-on-emphasis: #003262;
 
-  --color-border-default: var(--green);
-  --color-border-muted: var(--gray);
+  /* Border and accent colors */
+  --color-border-default: #00FFBF;
+  --color-border-muted: #6b7680;
+  --color-border-subtle: rgba(0, 255, 191, 0.3);
 
-  --color-accent-fg: var(--green);
-  --color-accent-emphasis: var(--green);
+  /* Accent colors (links, highlights) */
+  --color-accent-fg: #00FFBF;
+  --color-accent-emphasis: #00FFBF;
+  --color-accent-muted: rgba(0, 255, 191, 0.4);
+  --color-accent-subtle: rgba(0, 255, 191, 0.15);
 
-  --color-btn-text: var(--green);
+  /* Button styling */
+  --color-btn-text: #00FFBF;
   --color-btn-bg: transparent;
-  --color-btn-border: var(--green);
+  --color-btn-border: #00FFBF;
   --color-btn-hover-bg: rgba(0, 255, 191, 0.1);
-  --color-btn-primary-text: var(--blue);
-  --color-btn-primary-bg: var(--green);
-  --color-btn-primary-border: var(--green);
+  --color-btn-hover-border: #00FFBF;
+  --color-btn-active-bg: rgba(0, 255, 191, 0.2);
 
+  /* Primary button (submit, etc) */
+  --color-btn-primary-text: #003262;
+  --color-btn-primary-bg: #00FFBF;
+  --color-btn-primary-border: #00FFBF;
+  --color-btn-primary-hover-bg: #00e6ac;
+  --color-btn-primary-hover-border: #00e6ac;
+
+  /* Form controls */
   --color-input-bg: #002147;
-  --color-input-border: var(--green);
+  --color-input-border: #00FFBF;
+  --color-input-contrast-bg: #003262;
   --color-primer-shadow-focus: 0 0 0 3px rgba(0, 255, 191, 0.3);
+
+  /* Neutral backgrounds */
+  --color-neutral-muted: rgba(0, 255, 191, 0.1);
+  --color-neutral-subtle: rgba(0, 255, 191, 0.05);
+
+  /* State colors */
+  --color-attention-subtle: rgba(0, 255, 191, 0.1);
+  --color-danger-fg: #ff6b6b;
 }
 
-/* Ensure all text elements follow your theme */
-* {
-  color-scheme: dark;
+/* Giscus-specific class targeting */
+
+/* Main comment container */
+.gsc-comments {
+  font-family: 'Rethink Sans', sans-serif;
 }
 
-.markdown-body strong {
-  color: var(--green) !important;
+/* Individual comment boxes */
+.gsc-comment-box,
+.gsc-timeline .gsc-comment {
+  background-color: #003262 !important;
+  border: 1px solid #00FFBF !important;
+  border-radius: 6px;
 }
 
-.markdown-body a {
-  color: var(--green) !important;
-  border-bottom: 1px solid var(--gray) !important;
+/* Comment headers */
+.gsc-comment-header {
+  background-color: #002147 !important;
+  border-bottom: 1px solid #00FFBF !important;
 }
 
-.markdown-body a:hover {
+/* Comment content area */
+.gsc-comment-content {
+  background-color: #003262 !important;
+  color: #ffffff !important;
+}
+
+/* Input form */
+.gsc-comment-box-main {
+  background-color: #002147 !important;
+  border: 1px solid #00FFBF !important;
+  border-radius: 6px;
+}
+
+/* Textarea for new comments */
+.gsc-comment-box textarea {
+  background-color: #002147 !important;
+  border: 1px solid #00FFBF !important;
+  color: #ffffff !important;
+  font-family: 'Rethink Sans', sans-serif !important;
+}
+
+.gsc-comment-box textarea:focus {
+  border-color: #00FFBF !important;
+  box-shadow: 0 0 0 3px rgba(0, 255, 191, 0.3) !important;
+  outline: none !important;
+}
+
+/* All buttons */
+.gsc-comment-box-button,
+.gsc-comment-box-preview-button,
+.gsc-comment-box-write-button,
+button[type="submit"] {
+  background-color: #00FFBF !important;
+  border: 1px solid #00FFBF !important;
+  color: #003262 !important;
+  font-weight: bold !important;
+}
+
+.gsc-comment-box-button:hover,
+button[type="submit"]:hover {
+  background-color: #00e6ac !important;
+  border-color: #00e6ac !important;
+}
+
+/* Secondary/outline buttons */
+.gsc-comment-box-preview-button,
+.gsc-comment-box-write-button {
+  background-color: transparent !important;
+  border: 1px solid #00FFBF !important;
+  color: #00FFBF !important;
+}
+
+.gsc-comment-box-preview-button:hover,
+.gsc-comment-box-write-button:hover {
+  background-color: rgba(0, 255, 191, 0.1) !important;
+}
+
+/* Reaction buttons */
+.gsc-reactions-count,
+.gsc-social-reaction-summary-item {
+  background-color: transparent !important;
+  border: 1px solid #00FFBF !important;
+  color: #00FFBF !important;
+  border-radius: 20px !important;
+}
+
+.gsc-reactions-count:hover,
+.gsc-social-reaction-summary-item:hover {
+  background-color: rgba(0, 255, 191, 0.1) !important;
+}
+
+.gsc-reactions-count.has-reacted,
+.gsc-social-reaction-summary-item.reacted {
+  background-color: rgba(0, 255, 191, 0.2) !important;
+}
+
+/* Links in comments - match your site style */
+.gsc-comment-content a,
+.gsc-comment-box a {
+  color: #00FFBF !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid #6b7680 !important;
+  font-weight: bold !important;
+}
+
+.gsc-comment-content a:hover,
+.gsc-comment-box a:hover {
   border-bottom: none !important;
+}
+
+/* Strong/bold text in comments */
+.gsc-comment-content strong,
+.gsc-comment-box strong {
+  color: #00FFBF !important;
+}
+
+/* Code blocks */
+.gsc-comment-content code,
+.gsc-comment-content pre {
+  background-color: #002147 !important;
+  border: 1px solid #6b7680 !important;
+  color: #ffffff !important;
+  border-radius: 3px !important;
+  padding: 0.2em 0.4em !important;
+}
+
+/* Loading indicator */
+.gsc-loading,
+.gsc-comments-count {
+  color: #00FFBF !important;
+}
+
+/* Author badges/labels */
+.gsc-comment-author-badge,
+.timeline-comment-label {
+  background-color: #00FFBF !important;
+  color: #003262 !important;
+}
+
+/* Timestamps and metadata */
+.gsc-comment-header-date,
+.gsc-comment-header .color-fg-muted {
+  color: #6b7680 !important;
+}
+
+/* Discussion title */
+.gsc-main .gsc-comments > .gsc-comment-box {
+  order: 2;
+  margin-bottom: 1rem;
+}
+
+.gsc-main .gsc-comments > .gsc-timeline {
+  order: 3;
+}
+
+/* Make timeline flow like your site */
+.gsc-timeline {
+  flex-direction: column-reverse;
+}
+
+.gsc-header {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #00FFBF;
+}
+
+/* Sign in prompt */
+.gsc-comment-box-signed-in-as,
+.gsc-comment-box-sign-in-github {
+  color: #ffffff !important;
+}
+
+.gsc-comment-box-sign-in-github a {
+  color: #00FFBF !important;
+  font-weight: bold !important;
 }
