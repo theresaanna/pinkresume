@@ -23,24 +23,40 @@ export default function BlogIndex() {
   }
 
   return (
-    <div className="max-w-3xl mx-auto p-8">
-      <h1 className="text-3xl font-bold mb-6">📚 Blog</h1>
-      {posts.length === 0 ? (
-        <p>No posts yet. Check back soon!</p>
-      ) : (
-        <ul className="space-y-4">
-          {posts.map((post) => (
-            <li key={post.slug}>
-              <Link href={`/blog/${post.slug}`} className="text-blue-600 hover:underline">
-                {post.title}
-              </Link>
-              <p className="text-sm text-gray-500">
-                {new Date(post.date).toDateString()}
-              </p>
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
+    <main>
+      <div className="main">
+        <div className="star-container">
+          <div className="star-menu">
+            <nav className="star-nav">
+              <li><a href="/#blog">Writing</a></li>
+              <li><a href="/#resume">Resume</a></li>
+              <li><a href="/#contact">Contact</a></li>
+              <li><a href="/#about">About</a></li>
+            </nav>
+          </div>
+        </div>
+        <div className="body">
+          <div className="max-w-3xl mx-auto p-8">
+            <h1 className="text-3xl font-bold mb-6">Writing by Theresa Summa</h1>
+            {posts.length === 0 ? (
+              <p>No posts yet. Check back soon!</p>
+            ) : (
+              <ul className="space-y-4">
+                {posts.map((post) => (
+                  <li key={post.slug}>
+                    <Link href={`/blog/${post.slug}`}>
+                      {post.title}
+                    </Link>
+                    <p className="text-sm">
+                      {new Date(post.date).toDateString()}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        </div>
+      </div>
+    </main>
   );
 }

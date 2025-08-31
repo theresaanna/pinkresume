@@ -13,7 +13,7 @@ async function Home() {
         <div className="star-container">
           <div className="star-menu">
             <nav className="star-nav">
-             <li><a href="/blog">Writing</a></li>
+             <li><a href="#blog">Writing</a></li>
              <li><a href="#resume">Resume</a></li>
              <li><a href="#contact">Contact</a></li>
              <li><a href="#about">About</a></li>
