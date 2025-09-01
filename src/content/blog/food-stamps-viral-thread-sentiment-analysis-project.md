@@ -28,8 +28,6 @@ To start, I decided to run TextBlob and VADER against the comments. AI guided me
 
 ## VADER vs TextBlob Results Summary
 
-This document summarizes the sentiment analysis results from VADER and TextBlob algorithms applied to 718 Threads replies.
-
 ### VADER Sentiment Distribution
 - **Positive**: 254 replies (35.4%)
 - **Negative**: 255 replies (35.5%)
@@ -54,14 +52,6 @@ This document summarizes the sentiment analysis results from VADER and TextBlob 
 | **High** | 315 | 43.9% |
 | **Low** | 210 | 29.2% |
 | **Medium** | 193 | 26.9% |
-
-## Methods
-
-- **Total Analyzed**: 718 Threads replies
-- **Analysis Method**: VADER compound scores + TextBlob polarity scores
-- **Combination Strategy**: Weighted average (60% VADER, 40% TextBlob)
-- **Confidence Calculation**: Based on absolute score values and contextual signals
-- **Neutral Threshold**: ±0.05 for tighter classification boundaries
 
 The results were wildly inaccurate, as we will come to see. I suspected as much, or else the analysis would have ended here. There's no way there was a slight positive lean to this data. 
 
@@ -153,7 +143,7 @@ I chose RoBERTa social and DistilBERT because of their use on casual text and so
 
 For some reason, I cannot find the correct results for DistilBERT. I must have accidentally not included all of the same metrics for DistilBERT as I did for RoBERTa. Still, when I did the original review of the analysis, RoBERTa was the clear winner.
 
-##RoBERTa Social Results
+## RoBERTa Social Results
 ### Performance Metrics
 * Test Accuracy: 81.8%
 * F1 Score (Weighted): 0.784
