@@ -169,9 +169,9 @@ For some reason, I cannot find the correct results for DistilBERT. I must have a
 
 | Sentiment | RoBERTa | Gradient Boosting | SVM | Random Forest | Winner |
 |-----------|---------|-------------------|-----|---------------|---------|
-| **Positive** | **8.3%** | 5.7% | 0.8% | 1.4% | 🤖 **RoBERTa** (+46% vs GB) |
-| **Negative** | 90.0% | **89.7%** | **99.2%** | 97.6% | 🌳 **Gradient Boosting** (most balanced) |
-| **Neutral** | 1.7% | **4.7%** | 0.0% | 1.0% | 🌳 **Gradient Boosting** (+176% vs RoBERTa) |
+| **Positive** | **8.3%** | 5.7% | 0.8% | 1.4% | **RoBERTa** (+46% vs GB) |
+| **Negative** | 90.0% | **89.7%** | **99.2%** | 97.6% | **Gradient Boosting** (most balanced) |
+| **Neutral** | 1.7% | **4.7%** | 0.0% | 1.0% | **Gradient Boosting** (+176% vs RoBERTa) |
 
 You can see I am beginning to extract metrics like accuracy, precision, recall and F1 score, which is what I'm missing data to do with DistilBERT. Oh well, this is a toy analysis anyway! 
 
