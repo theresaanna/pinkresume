@@ -6,7 +6,7 @@ date: "2025-09-01T03:47:13.924Z"
 # Background
 Welcome to an exciting milestone for me. The project I'm about to tell you about is my first foray into data analysis, machine learning, and being a user of AI in the sense of implementing it in an application and using it as a pair programming partner, in ChatGPT, ClaudeAI.
 
-I am in week six of a six month certification program in Generative AI at John Hopkins Whiting School of Engineering. We have a project at week eight, but it was a holiday weekend and I was feeling antsy to get my hands dirty.
+I am in week six of a six month certification program in Generative AI at Johns Hopkins Whiting School of Engineering. We have a project at week eight, but it was a holiday weekend and I was feeling antsy to get my hands dirty.
 
 Please feel free to peruse the repository at [Github: SNAP Sentiment Analysis by theresaanna](https://github.com/theresaanna/SNAP_sentiment_analysis).
 
