@@ -40,7 +40,7 @@ To start, I decided to run TextBlob and VADER against the comments. AI guided me
 
 ## Combined Results
 
-### 🎯 Final Combined Sentiment Distribution
+### Final Combined Sentiment Distribution
 - **Positive**: 305 replies (42.5%)
 - **Negative**: 271 replies (37.7%)
 - **Neutral**: 142 replies (19.8%)
