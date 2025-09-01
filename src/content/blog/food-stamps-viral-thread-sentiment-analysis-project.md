@@ -15,8 +15,6 @@ A couple weeks prior, on the Meta platform Threads, I had made a contentious pos
 
 **[The original Threads post](https://www.threads.com/@hellyeahitstheresa/post/DNJc3pfS2-e)**
 
-![image](public/img/threads_snap.png)
-
 # The Data
 While the Threads UI reported 1.5k comments on the Thread, I was able to programatically extract about 718 non-deduplicated comments. I dug into why this was, and mananged to extract about 100 comments more than originally by taking the first branch of replies to my reply to the original post. The missing comments are likely second+ tier branches off those, or branched off of other peoples' replies. The Meta API doesn't have an endpoint, to my knowledge, to fetch all comments, nested or not. I would have needed to come up with some recursive function to dig down all branches, but if I'm honest, for this toy project, I felt 718 was a good number of rows to work with.
 
