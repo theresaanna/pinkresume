@@ -13,9 +13,9 @@ Please feel free to peruse the repository at [Github: SNAP Sentiment Analysis by
 # The Idea
 A couple weeks prior, on the Meta platform Threads, I had made a contentious post about food stamps. Whether you agree with my premise or not, I think this will be an interesting journey. I kept thinking I was curious to do some analysis on the comments, and then came to realize I knew enough to at least experiment with what I'm learning.
 
-[The original Threads post](https://www.threads.com/@hellyeahitstheresa/post/DNJc3pfS2-e)
-![image](https://private-user-images.githubusercontent.com/126935/482398652-268f9495-8c6e-4d40-80ee-66c3dc985b23.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTY2OTkwMDUsIm5iZiI6MTc1NjY5ODcwNSwicGF0aCI6Ii8xMjY5MzUvNDgyMzk4NjUyLTI2OGY5NDk1LThjNmUtNGQ0MC04MGVlLTY2YzNkYzk4NWIyMy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwOTAxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDkwMVQwMzUxNDVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT05MTZkMDg2ZTk4MTQyMDI5NDEzNjk2Y2M5N2I4ZDRmOTc2MzU3ZTYwNDdhNmJhZTQ3NjJkNDAyMzhmYmJjOTRkJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.xEGAP11gljLkudhhZTus5814_CD9lDfIZw2ntXWY8FQ)
+**[The original Threads post](https://www.threads.com/@hellyeahitstheresa/post/DNJc3pfS2-e)**
 
+![image](public/img/threads_snap.png)
 
 # The Data
 While the Threads UI reported 1.5k comments on the Thread, I was able to programatically extract about 718 non-deduplicated comments. I dug into why this was, and mananged to extract about 100 comments more than originally by taking the first branch of replies to my reply to the original post. The missing comments are likely second+ tier branches off those, or branched off of other peoples' replies. The Meta API doesn't have an endpoint, to my knowledge, to fetch all comments, nested or not. I would have needed to come up with some recursive function to dig down all branches, but if I'm honest, for this toy project, I felt 718 was a good number of rows to work with.
