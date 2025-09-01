@@ -2,6 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import { stripMarkdown } from '../../utils/stripMarkdown';
 
 // Helper function to get blog posts (runs at build time)
 export async function getBlogPosts() {
@@ -15,12 +16,13 @@ export async function getBlogPosts() {
         const filePath = path.join(blogDir, file);
         const fileContent = fs.readFileSync(filePath, 'utf8');
         const { data, content } = matter(fileContent);
+        const excerpt = data.excerpt || content.slice(0, 150) + '...';
 
         return {
           slug: file.replace('.md', ''),
           title: data.title || 'Untitled',
           date: data.date || null,
-          excerpt: data.excerpt || content.slice(0, 150) + '...',
+          excerpt: stripMarkdown(excerpt),
           ...data
         };
       })

@@ -30,7 +30,8 @@
     "react-dom": "^18",
     "react-markdown": "^10.1.0",
     "react-syntax-highlighter": "^15.6.6",
-    "remark-gfm": "^4.0.1"
+    "remark-gfm": "^4.0.1",
+    "remove-markdown": "^0.6.2"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",
