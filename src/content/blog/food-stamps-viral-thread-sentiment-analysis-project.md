@@ -174,14 +174,14 @@ For some reason, I cannot find the correct results for DistilBERT. I must have a
 | **Neutral** | 1.7% | **4.7%** | 0.0% | 1.0% | **Gradient Boosting** (+176% vs RoBERTa) |
 
 You can see I am beginning to extract metrics like accuracy, precision, recall and F1 score, which is what I'm missing data to do with DistilBERT. Oh well, this is a toy analysis anyway! 
-
+I did some basic hyperparameter tuning and cleaned the comment data anew for this round. 
 I also ran an emsemble method to see if the combination of RoBERTa and DistilBERT would get any closer, but really, I think RoBERTa is pretty close to reality. 
 
 Having reviewed the inaccurately labeled comments, it's clear that where the algorithms are largely falling down are around sarcasm. While I hear tell of people working on this problem, I believe it is still just that - a work in progress.
 
 # What I Learned
 I learned that people really don't like the idea of people on food stamps buying soda with them!
-Honestly, the data wasn't the point so much as the process. I'm really pleased with what I got out of this first little project. It'll set me up well to embark on future projects.
+Honestly, the data wasn't the point so much as the process. I'm really pleased with what I got out of this first little project. It'll set me up well to embark on future projects. For example, I've learned how to be more structured and scientific about how I update my code.
 
 # What about you?
 Did I miss anything you're curious about? Have you done sentiment analysis on social media data? What did you find?
