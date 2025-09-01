@@ -1,0 +1,28 @@
+:root {
+  /* Backgrounds */
+  --giscus-color-background: #ffffff; /* white */
+  --giscus-color-secondary-background: #f0fdf4; /* very light green tint */
+
+  /* Borders */
+  --giscus-color-border: #22c55e; /* green border */
+  --giscus-color-secondary-border: #1d4ed8; /* blue accent border */
+
+  /* Text */
+  --giscus-color-text: #1e3a8a; /* deep blue */
+  --giscus-color-secondary-text: #22c55e; /* green highlights */
+  --giscus-color-tertiary-text: #64748b; /* muted gray-blue */
+
+  /* Links & Mentions */
+  --giscus-color-link: #1d4ed8; /* standard blue */
+  --giscus-color-link-hover: #2563eb; /* brighter blue hover */
+  --giscus-color-input-focus-border: #22c55e; /* green focus ring */
+
+  /* Buttons */
+  --giscus-color-button-text: #ffffff; /* white button text */
+  --giscus-color-button-background: #1d4ed8; /* blue buttons */
+  --giscus-color-button-hover-background: #2563eb; /* hover state */
+
+  /* Reactions */
+  --giscus-color-icon: #22c55e; /* green icons */
+  --giscus-color-icon-hover: #1d4ed8; /* hover -> blue */
+}

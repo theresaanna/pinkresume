@@ -13,13 +13,12 @@ const Comments = () => {
       script.setAttribute('data-repo-id', 'R_kgDOL9BBAQ'); // Get from giscus.app
       script.setAttribute('data-category', 'Announcements');
       script.setAttribute('data-category-id', 'DIC_kwDOL9BBAc4Cuz4x'); // Get from giscus.app
-      script.setAttribute('data-mapping', 'pathname');
+        script.setAttribute('data-theme', 'transparent_dark');
+        script.setAttribute('data-mapping', 'pathname');
       script.setAttribute('data-strict', '0');
       script.setAttribute('data-reactions-enabled', '1');
       script.setAttribute('data-emit-metadata', '0');
       script.setAttribute('data-input-position', 'bottom');
-      script.setAttribute('data-theme', 'noborder_gray');
-      script.setAttribute('data-theme-url', `${window.location.origin}/giscus-theme.css`);
       script.setAttribute('data-lang', 'en');
       script.setAttribute('data-loading', 'lazy');
       script.crossOrigin = 'anonymous';
