@@ -25,7 +25,7 @@ Lastfriends runs on [next.js](https://nextjs.org/) is hosted on [Vercel](https:/
 ## The Future
 In the coming days I'll be adding more charts and wordclouds for genres and artists. I'm also going to try my hand at showing "bursts" in listening data for a user and artist.
 
-I might also try to parallelize the process that pulls a user's tracks. It's limited to 500 tracks right now, and I feel the data would be much richer if we could get conceivably someone's thousands of tracks for analysis.
+I might also try to massage the process that pulls a user's tracks. It's limited to 500 tracks right now, and I feel the data would be much richer if we could get conceivably someone's thousands of tracks for analysis.
 
 ## Thank you!
 Thanks for reading. If you have any questions about implementation, please ask below or direct them to my email, [theresasumma@gmail.com](mailto:theresasumma@gmail.com). I can also be found on Threads at [@hellyeahitstheresa](https://www.threads.com/@hellyeahitstheresa).
