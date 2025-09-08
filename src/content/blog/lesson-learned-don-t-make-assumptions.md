@@ -1,6 +1,7 @@
 ---
 title: "Lesson Learned: Don't Make Assumptions"
 date: "2025-09-08T20:03:34.669Z"
+excerpt: "I set out to add Spotify integration to my Last.fm comparison tool, but hit a roadblock with API limitations that taught me an important lesson about making assumptions."
 ---
 
 # Adding Spotify to the lastfriends.site tool
