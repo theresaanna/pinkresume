@@ -195,11 +195,29 @@ const sparkles = new SparkleFall({
     const wind = document.getElementById('wind');
     const maxSparkles = document.getElementById('maxSparkles');
     const sparkleSize = document.getElementById('sparkleSize');
+    const sparkleChars = document.getElementById('sparkleChars');
+    const colors = document.getElementById('colors');
     
-    if (interval) interval.addEventListener('input', window.updateDisplayValues);
-    if (wind) wind.addEventListener('input', window.updateDisplayValues);
-    if (maxSparkles) maxSparkles.addEventListener('input', window.updateDisplayValues);
-    if (sparkleSize) sparkleSize.addEventListener('input', window.updateDisplayValues);
+    // Update display values and apply changes in real-time for sliders
+    const handleSliderChange = () => {
+      window.updateDisplayValues();
+      window.updateSparkles();
+    };
+    
+    if (interval) interval.addEventListener('input', handleSliderChange);
+    if (wind) wind.addEventListener('input', handleSliderChange);
+    if (maxSparkles) maxSparkles.addEventListener('input', handleSliderChange);
+    if (sparkleSize) sparkleSize.addEventListener('input', handleSliderChange);
+    
+    // Add enter key support for text inputs
+    const handleTextEnter = (e) => {
+      if (e.key === 'Enter') {
+        window.updateSparkles();
+      }
+    };
+    
+    if (sparkleChars) sparkleChars.addEventListener('keydown', handleTextEnter);
+    if (colors) colors.addEventListener('keydown', handleTextEnter);
   };
   
   // Initialize on load
@@ -629,7 +647,7 @@ const pageHTML = `
         </div>
 
         <div style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
-            <button onclick="updateSparkles()">🔄 Apply Changes</button>
+            <button onclick="updateSparkles()">🔄 Apply Text Changes</button>
             <button onclick="sparkleInstance && sparkleInstance.burst(30)">💥 Burst!</button>
             <button onclick="toggleSparkles()" id="toggleBtn">⏸️ Pause</button>
             <button onclick="sparkleInstance && sparkleInstance.clear()">🧹 Clear All</button>
