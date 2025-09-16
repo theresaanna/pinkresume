@@ -656,7 +656,7 @@ const pageHTML = `
             <div style="display: flex; gap: 10px; flex-wrap: wrap;">
                 <button onclick="window.sparkleInstance && window.sparkleInstance.burst(30)">💥 Burst!</button>
                 <button onclick="toggleSparkles()" id="toggleBtn">⏸️ Pause</button>
-                <button onclick="window.sparkleInstance && window.sparkleInstance.clear()">🧹 Clear All</button>
+                <button onclick="loadPreset('default')">🔄 Reset to Default</button>
             </div>
             <button onclick="updateSparkles()">🔄 Apply Code Changes</button>
         </div>
