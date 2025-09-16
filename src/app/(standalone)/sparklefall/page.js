@@ -2,7 +2,6 @@
 
 import { useEffect } from 'react';
 import Script from 'next/script';
-import './sparklefall-reset.css';
 
 export default function SparkleFallDemo() {
   useEffect(() => {
@@ -42,7 +41,7 @@ const initializeSparkles = () => {
     }
     
     sparkleInstance = new window.SparkleFall({
-      container: document.body,
+      container: document.querySelector('.sparklefall-demo') || document.body,
       autoStart: true,
       ...config
     });
@@ -212,32 +211,42 @@ const sparkles = new SparkleFall({
 
 const pageHTML = `
 <style>
-    /* Reset all styles to ensure complete isolation */
-    *, *::before, *::after {
-        all: initial;
-        display: revert;
+    /* Apply background to html and body for full coverage */
+    html, body {
+        margin: 0;
+        padding: 0;
+        background: #0a1929;
+        min-height: 100vh;
+    }
+    
+    /* Scoped styles with higher specificity */
+    .sparklefall-demo {
+        /* Container reset */
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        width: 100%;
+        min-height: 100vh;
+    }
+    
+    .sparklefall-demo * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
-    
-    html {
-        font-size: 16px;
-        line-height: 1.15;
-        -webkit-text-size-adjust: 100%;
-    }
 
-    body {
+    .sparklefall-demo {
         font-family: 'Fredoka', 'Comic Sans MS', cursive, sans-serif;
         background: #0a1929;
         min-height: 100vh;
         color: #fff;
         overflow-x: hidden;
         position: relative;
+        display: block;
     }
     
     /* Create distant stars background */
-    body::before {
+    .sparklefall-demo::before {
         content: '';
         position: fixed;
         top: 0;
@@ -263,7 +272,7 @@ const pageHTML = `
     }
     
     /* More dense star field */
-    body::after {
+    .sparklefall-demo::after {
         content: '';
         position: fixed;
         top: 0;
@@ -303,7 +312,7 @@ const pageHTML = `
         }
     }
 
-    .container {
+    .sparklefall-demo .container {
         max-width: 1200px;
         margin: 0 auto;
         padding: 20px;
@@ -311,34 +320,46 @@ const pageHTML = `
         z-index: 10;
     }
 
-    header {
+    .sparklefall-demo header {
         text-align: center;
         padding: 40px 0;
         animation: fadeInDown 0.8s ease;
     }
 
-    h1 {
+    .sparklefall-demo h1 {
         font-size: 3.5rem;
         margin-bottom: 10px;
         text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
         font-weight: 600;
         letter-spacing: 1px;
+        color: #fff;
+    }
+    
+    .sparklefall-demo h2 {
+        font-size: 1.8rem;
+        color: #fff;
+        font-weight: 500;
+    }
+    
+    .sparklefall-demo h3 {
+        font-size: 1.3rem;
+        color: #fff;
     }
 
-    .subtitle {
-        font-size: 1.2rem;
+    .sparklefall-demo .subtitle {
+        font-size: 1.3rem;
         opacity: 0.9;
         margin-bottom: 30px;
     }
 
-    .demo-grid {
+    .sparklefall-demo .demo-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 20px;
         margin-bottom: 40px;
     }
 
-    .demo-card {
+    .sparklefall-demo .demo-card {
         background: rgba(13, 27, 42, 0.8);
         backdrop-filter: blur(10px);
         border-radius: 15px;
@@ -349,22 +370,35 @@ const pageHTML = `
         box-shadow: 0 4px 20px rgba(0,0,0,0.3);
     }
 
-    .demo-card:hover {
+    .sparklefall-demo .demo-card:hover {
         transform: translateY(-5px);
     }
 
-    .demo-card h3 {
+    .sparklefall-demo .demo-card h3 {
         margin-bottom: 15px;
         font-size: 1.3rem;
     }
 
-    .demo-card p {
+    .sparklefall-demo .demo-card p {
         margin-bottom: 15px;
         opacity: 0.9;
-        font-size: 0.95rem;
+        font-size: 1.1rem;
+        color: #fff;
+        line-height: 1.6;
+    }
+    
+    .sparklefall-demo ul {
+        list-style: none;
+        padding-left: 0;
+    }
+    
+    .sparklefall-demo li {
+        color: #fff;
+        line-height: 1.7;
+        font-size: 1.05rem;
     }
 
-    button {
+    .sparklefall-demo button {
         background: linear-gradient(135deg, #4a69bd 0%, #0c2461 100%);
         color: white;
         border: none;
@@ -379,22 +413,22 @@ const pageHTML = `
         letter-spacing: 0.5px;
     }
 
-    button:hover {
+    .sparklefall-demo button:hover {
         transform: translateY(-2px);
         box-shadow: 0 5px 20px rgba(74, 105, 189, 0.5);
         background: linear-gradient(135deg, #5f7fc9 0%, #1e3c72 100%);
     }
 
-    button:active {
+    .sparklefall-demo button:active {
         transform: translateY(0);
     }
 
-    button.active {
+    .sparklefall-demo button.active {
         background: linear-gradient(135deg, #ffd89b 0%, #ff8a00 100%);
         box-shadow: 0 4px 15px rgba(255, 138, 0, 0.4);
     }
 
-    .controls {
+    .sparklefall-demo .controls {
         background: rgba(13, 27, 42, 0.9);
         backdrop-filter: blur(15px);
         border-radius: 15px;
@@ -405,22 +439,47 @@ const pageHTML = `
         box-shadow: 0 8px 32px rgba(0,0,0,0.4);
     }
 
-    .control-group {
+    .sparklefall-demo .control-group {
         margin-bottom: 20px;
     }
 
-    .control-group label {
+    .sparklefall-demo .control-group label {
         display: block;
         margin-bottom: 10px;
         font-weight: 600;
+        font-size: 1.1rem;
     }
-
-    .control-group input[type="range"] {
+    .sparklefall-demo .control-group input[type="range"] {
         width: 100%;
-        margin-bottom: 5px;
+        -webkit-appearance: none;
+        appearance: none;
+        height: 6px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 3px;
+        outline: none;
+        cursor: pointer;
+    }
+    
+    .sparklefall-demo .control-group input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        background: #4a69bd;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    
+    .sparklefall-demo .control-group input[type="range"]::-moz-range-thumb {
+        width: 18px;
+        height: 18px;
+        background: #4a69bd;
+        border-radius: 50%;
+        cursor: pointer;
+        border: none;
     }
 
-    .control-group input[type="text"] {
+    .sparklefall-demo .control-group input[type="text"] {
         width: 100%;
         padding: 8px;
         border-radius: 5px;
@@ -430,46 +489,53 @@ const pageHTML = `
         font-family: 'Fredoka', cursive;
     }
 
-    .control-group input[type="text"]::placeholder {
+    .sparklefall-demo .control-group input[type="text"]::placeholder {
         color: rgba(255, 255, 255, 0.6);
     }
 
-    .value-display {
-        font-size: 0.9rem;
+    .sparklefall-demo .value-display {
+        font-size: 1rem;
         opacity: 0.8;
     }
 
-    .preset-buttons {
+    .sparklefall-demo .preset-buttons {
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
         margin-top: 20px;
     }
 
-    .code-block {
+    .sparklefall-demo .code-block {
         background: rgba(5, 15, 25, 0.8);
         padding: 15px;
         border-radius: 10px;
         font-family: 'Courier New', monospace;
-        font-size: 0.9rem;
+        font-size: 1rem;
         overflow-x: auto;
         margin-top: 20px;
         border: 1px solid rgba(255, 255, 255, 0.1);
     }
+    
+    .sparklefall-demo .code-block code {
+        color: #fff;
+        font-family: inherit;
+        display: block;
+        font-size: 1rem;
+    }
 
-    footer {
+    .sparklefall-demo footer {
         text-align: center;
         padding: 40px 0;
         opacity: 0.8;
     }
 
-    footer a {
+    .sparklefall-demo footer a {
         color: white;
         text-decoration: none;
         margin: 0 10px;
     }
 
-    footer a:hover {
+    .sparklefall-demo footer a:hover {
         text-decoration: underline;
     }
 
@@ -501,8 +567,8 @@ const pageHTML = `
     }
 
     @media (max-width: 768px) {
-        h1 { font-size: 2rem; }
-        .demo-grid { grid-template-columns: 1fr; }
+        .sparklefall-demo h1 { font-size: 2rem; }
+        .sparklefall-demo .demo-grid { grid-template-columns: 1fr; }
     }
 </style>
 
@@ -510,6 +576,7 @@ const pageHTML = `
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+<div class="sparklefall-demo">
 <div class="container">
     <header class="sparklefall-header">
         <h1>✨ SparkleFall Demo</h1>
@@ -598,35 +665,39 @@ const sparkles = new SparkleFall({
         </div>
 
         <div class="demo-card">
-            <h3>✨ Features</h3>
-            <p>• Zero dependencies<br>
-               • Fully customizable<br>
-               • TypeScript support<br>
-               • < 3KB gzipped<br>
-               • Mobile optimized<br>
-               • Multiple animation modes</p>
+            <h3>⚛️ Framework Support</h3>
+            <p>SparkleFall works with your favorite framework:</p>
+            <div class="code-block">
+                <code>npm install react-sparklefall</code>
+            </div>
+            <div class="code-block">
+                <code>npm install ngx-sparklefall</code>
+            </div>
+            <p style="margin-top: 15px;">Full TypeScript support included!</p>
         </div>
 
         <div class="demo-card">
-            <h3>🎨 Customization</h3>
-            <p>Control every aspect of your sparkles:</p>
+            <h3>✨ Features</h3>
             <ul style="list-style: none; padding-left: 0;">
-                <li>🎯 Position & container</li>
-                <li>🌈 Colors & characters</li>
-                <li>📏 Size & speed</li>
-                <li>💨 Wind & rotation</li>
-                <li>⚡ Performance options</li>
+                <li>• Zero dependencies</li>
+                <li>• Fully customizable</li>
+                <li>• TypeScript support</li>
+                <li>• < 3KB gzipped</li>
+                <li>• Mobile optimized</li>
+                <li>• Performance focused</li>
             </ul>
         </div>
     </div>
 
     <footer>
-        <p>Made with ✨ by SparkleFall</p>
-        <div style="margin-top: 10px;">
+        <p style="margin-bottom: 15px;">Made with ✨ by <a href="https://theresasumma.com" target="_blank">Theresa</a></p>
+        <div>
             <a href="https://github.com/theresaanna/sparklefall" target="_blank">GitHub</a>
-            <a href="https://www.npmjs.com/package/sparklefall" target="_blank">NPM</a>
-            <a href="https://github.com/theresaanna/sparklefall#readme" target="_blank">Documentation</a>
+            <a href="https://www.npmjs.com/package/sparklefall" target="_blank">Core NPM</a>
+            <a href="https://www.npmjs.com/package/react-sparklefall" target="_blank">React NPM</a>
+            <a href="https://www.npmjs.com/package/ngx-sparklefall" target="_blank">Angular NPM</a>
         </div>
     </footer>
+</div>
 </div>
 `;
