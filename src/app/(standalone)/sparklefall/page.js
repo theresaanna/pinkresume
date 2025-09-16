@@ -34,6 +34,9 @@ const initializeSparkles = () => {
   
   let sparkleInstance;
   
+  // Make sparkleInstance accessible globally for buttons
+  window.sparkleInstance = null;
+  
   // Initialize with default settings
   function initSparkles(config = {}) {
     if (sparkleInstance) {
@@ -45,6 +48,9 @@ const initializeSparkles = () => {
       autoStart: true,
       ...config
     });
+    
+    // Store globally for button access
+    window.sparkleInstance = sparkleInstance;
     
     updateCodeDisplay(config);
   }
@@ -148,13 +154,13 @@ const initializeSparkles = () => {
   // Toggle sparkles
   window.toggleSparkles = function() {
     const btn = document.getElementById('toggleBtn');
-    if (sparkleInstance) {
-      if (sparkleInstance.isRunning) {
-        sparkleInstance.stop();
+    if (window.sparkleInstance) {
+      if (window.sparkleInstance.isRunning) {
+        window.sparkleInstance.stop();
         btn.textContent = '▶️ Play';
         btn.classList.add('active');
       } else {
-        sparkleInstance.start();
+        window.sparkleInstance.start();
         btn.textContent = '⏸️ Pause';
         btn.classList.remove('active');
       }
@@ -646,11 +652,13 @@ const pageHTML = `
             </div>
         </div>
 
-        <div style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
-            <button onclick="updateSparkles()">🔄 Apply Text Changes</button>
-            <button onclick="sparkleInstance && sparkleInstance.burst(30)">💥 Burst!</button>
-            <button onclick="toggleSparkles()" id="toggleBtn">⏸️ Pause</button>
-            <button onclick="sparkleInstance && sparkleInstance.clear()">🧹 Clear All</button>
+        <div style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap; justify-content: space-between;">
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <button onclick="window.sparkleInstance && window.sparkleInstance.burst(30)">💥 Burst!</button>
+                <button onclick="toggleSparkles()" id="toggleBtn">⏸️ Pause</button>
+                <button onclick="window.sparkleInstance && window.sparkleInstance.clear()">🧹 Clear All</button>
+            </div>
+            <button onclick="updateSparkles()">🔄 Apply Code Changes</button>
         </div>
 
         <div class="code-block">
