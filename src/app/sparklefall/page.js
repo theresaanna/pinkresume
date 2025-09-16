@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import Script from 'next/script';
+import './sparklefall-reset.css';
 
 export default function SparkleFallDemo() {
   useEffect(() => {
@@ -211,10 +212,19 @@ const sparkles = new SparkleFall({
 
 const pageHTML = `
 <style>
-    * {
+    /* Reset all styles to ensure complete isolation */
+    *, *::before, *::after {
+        all: initial;
+        display: revert;
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+    }
+    
+    html {
+        font-size: 16px;
+        line-height: 1.15;
+        -webkit-text-size-adjust: 100%;
     }
 
     body {
@@ -501,7 +511,7 @@ const pageHTML = `
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <div class="container">
-    <header>
+    <header class="sparklefall-header">
         <h1>✨ SparkleFall Demo</h1>
         <p class="subtitle">Beautiful, customizable falling sparkle animations</p>
         <div class="preset-buttons">

@@ -1,0 +1,43 @@
+/* Reset all inherited styles for sparklefall page */
+body {
+  /* Reset all properties to initial values */
+  all: initial;
+  
+  /* Then apply only what we need */
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-family: 'Fredoka', 'Comic Sans MS', cursive, sans-serif !important;
+  background: #0a1929 !important;
+  min-height: 100vh !important;
+  color: #fff !important;
+  overflow-x: hidden !important;
+  position: relative !important;
+  
+  /* Ensure no other styles leak in */
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+/* Override any global styles that might affect our demo */
+body * {
+  /* Ensure our inline styles take precedence */
+  font-family: inherit !important;
+}
+
+/* Remove any potential nav or header styles */
+nav, header:not(.sparklefall-header) {
+  display: none !important;
+}
+
+/* Ensure our styles are not affected by globals */
+.container,
+.demo-card,
+.controls,
+.code-block,
+button {
+  /* These will use the inline styles from the component */
+  all: revert;
+}
