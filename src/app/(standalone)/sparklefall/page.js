@@ -603,7 +603,7 @@ const pageHTML = `
 <div class="sparklefall-demo">
 <div class="container">
     <header class="sparklefall-header">
-        <h1>✨ SparkleFall Demo</h1>
+        <h1>✨ Sparklefall ✨</h1>
         <p class="subtitle">Beautiful, customizable falling sparkle animations</p>
         <div class="preset-buttons">
             <button onclick="loadPreset('default')">✨ Default</button>
