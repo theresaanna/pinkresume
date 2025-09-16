@@ -604,7 +604,7 @@ const pageHTML = `
 <div class="container">
     <header class="sparklefall-header">
         <h1>✨ Sparklefall ✨</h1>
-        <p class="subtitle">Beautiful, customizable falling sparkle animations</p>
+        <p class="subtitle">Beautiful, fun falling sparkle animation JavaScript library</p>
         <div class="preset-buttons">
             <button onclick="loadPreset('default')">✨ Default</button>
             <button onclick="loadPreset('gold')">🌟 Gold Rush</button>
