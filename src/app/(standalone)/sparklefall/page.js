@@ -13,6 +13,7 @@ export default function SparkleFallDemo() {
 
   return (
     <>
+      <link rel="stylesheet" href="https://unpkg.com/sparklefall@latest/dist/sparklefall.css" />
       <Script 
         src="https://unpkg.com/sparklefall@latest/dist/sparklefall.min.js"
         strategy="afterInteractive"
@@ -46,6 +47,7 @@ const initializeSparkles = () => {
     sparkleInstance = new window.SparkleFall({
       container: document.querySelector('.sparklefall-demo') || document.body,
       autoStart: true,
+      injectStyles: true,
       ...config
     });
     
@@ -686,7 +688,25 @@ const sparkles = new SparkleFall({
             </div>
             <p style="margin-top: 15px;">Or use CDN:</p>
             <div class="code-block">
-                <code>&lt;script src="https://unpkg.com/sparklefall"&gt;&lt;/script&gt;</code>
+                <code>&lt;link rel="stylesheet" href="https://unpkg.com/sparklefall@latest/dist/sparklefall.css"&gt;</code>
+                <code>&lt;script src="https://unpkg.com/sparklefall@latest/dist/sparklefall.min.js"&gt;&lt;/script&gt;</code>
+            </div>
+        </div>
+
+        <div class="demo-card">
+            <h3>🧩 Include CSS</h3>
+            <p>Include the default CSS (choose one):</p>
+            <p style="margin-bottom: 8px;">ESM (Vite/Webpack):</p>
+            <div class="code-block">
+                <code>import 'sparklefall/styles.css';</code>
+                <code>import SparkleFall from 'sparklefall';</code>
+                <code>const sparkles = new SparkleFall({ injectStyles: true });</code>
+            </div>
+            <p style="margin-top: 15px;">CDN:</p>
+            <div class="code-block">
+                <code>&lt;link rel="stylesheet" href="https://unpkg.com/sparklefall@latest/dist/sparklefall.css"&gt;</code>
+                <code>&lt;script src="https://unpkg.com/sparklefall@latest/dist/sparklefall.min.js"&gt;&lt;/script&gt;</code>
+                <code>&lt;script&gt;const s = new SparkleFall({ injectStyles: true });&lt;/script&gt;</code>
             </div>
         </div>
 
