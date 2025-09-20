@@ -35,6 +35,7 @@ async function Home() {
               <li><a href="https://github.com/theresaanna">See also: my Github</a></li>
             </nav>
           </div>
+          <hr/>
           <div className="resume">
             <h1><a name="resume">My Experience</a></h1>
             <div className="job">
