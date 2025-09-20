@@ -107,3 +107,7 @@ p {
 .update {
   border-bottom: 1px solid var(--green);
 }
+
+.project-nav {
+  margin-left: 15px;
+}

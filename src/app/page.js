@@ -14,11 +14,12 @@ async function Home() {
           <div className="star-menu">
             <nav className="star-nav">
              <li><a href="#blog">Writing</a></li>
+              <li><a href="#projects">Projects</a></li>
              <li><a href="#resume">Resume</a></li>
              <li><a href="#contact">Contact</a></li>
              <li><a href="#about">About</a></li>
             </nav>
-         </div>
+          </div>
         </div>
         <div className="body">
           <strong><a name="letter">Hi.</a></strong><br/>
@@ -26,6 +27,14 @@ async function Home() {
             <h3>I am a software engineer.</h3>
           <BlogList posts={posts} />
           <hr/>
+          <div className="projects">
+            <a name="projects"><h1>Projects</h1></a>
+            <nav className="project-nav">
+              <li><a href="https://vibecheckai.pro">VibeCheckAI</a></li>
+              <li><a href="https://lastfriends.site">LastFriends</a></li>
+              <li><a href="https://github.com/theresaanna">See also: my Github</a></li>
+            </nav>
+          </div>
           <div className="resume">
             <h1><a name="resume">My Experience</a></h1>
             <div className="job">

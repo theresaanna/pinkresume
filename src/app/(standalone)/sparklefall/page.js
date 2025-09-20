@@ -723,6 +723,44 @@ const sparkles = new SparkleFall({
         </div>
 
         <div class="demo-card">
+            <h3>⚛️ React Usage</h3>
+            <p>Install and import the CSS once, then use the component:</p>
+            <div class="code-block">
+                <code>import 'sparklefall/styles.css';</code>
+                <code>import { SparkleFall } from 'react-sparklefall';</code>
+                <code></code>
+                <code>export default function App() {</code>
+                <code>  return (</code>
+                <code>    &lt;SparkleFall maxSparkles={50}&gt;</code>
+                <code>      &lt;h1&gt;✨ Hello!&lt;/h1&gt;</code>
+                <code>    &lt;/SparkleFall&gt;</code>
+                <code>  );</code>
+                <code>}</code>
+            </div>
+        </div>
+
+        <div class="demo-card">
+            <h3>🅰️ Angular Usage</h3>
+            <p>Import the CSS in global styles and use the standalone component:</p>
+            <div class="code-block">
+                <code>/* styles.css */</code>
+                <code>@import 'sparklefall/styles.css';</code>
+                <code></code>
+                <code>/* app.component.ts */</code>
+                <code>import { Component } from '@angular/core';</code>
+                <code>import { SparkleFallComponent } from 'ngx-sparklefall';</code>
+                <code></code>
+                <code>@Component({</code>
+                <code>  selector: 'app-root',</code>
+                <code>  standalone: true,</code>
+                <code>  imports: [SparkleFallComponent],</code>
+                <code>  template: `&lt;sparkle-fall [maxSparkles]="50"&gt;&lt;/sparkle-fall&gt;`</code>
+                <code>})</code>
+                <code>export class AppComponent {}</code>
+            </div>
+        </div>
+
+        <div class="demo-card">
             <h3>✨ Features</h3>
             <ul style="list-style: none; padding-left: 0;">
                 <li>• Zero dependencies</li>
