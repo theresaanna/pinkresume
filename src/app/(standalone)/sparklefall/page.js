@@ -754,7 +754,7 @@ const sparkles = new SparkleFall({
                 <code>  selector: 'app-root',</code>
                 <code>  standalone: true,</code>
                 <code>  imports: [SparkleFallComponent],</code>
-                <code>  template: `&lt;sparkle-fall [maxSparkles]="50"&gt;&lt;/sparkle-fall&gt;`</code>
+                <code>  template: \`&lt;sparkle-fall [maxSparkles]="50"&gt;&lt;/sparkle-fall&gt;\`</code>
                 <code>})</code>
                 <code>export class AppComponent {}</code>
             </div>
