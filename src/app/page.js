@@ -31,6 +31,7 @@ async function Home() {
             <a name="projects"><h1>Projects</h1></a>
             <nav className="project-nav">
               <li><a href="https://vibecheckai.pro">VibeCheckAI</a></li>
+              <li><a href="https://theresasumma.com/sparklefall">Sparklefall</a></li>
               <li><a href="https://lastfriends.site">LastFriends</a></li>
               <li><a href="https://github.com/theresaanna">See also: my Github</a></li>
             </nav>
