@@ -1,10 +1,10 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { Check } from 'lucide-react';
 
-export default function ItemClaimApp() {
+export default function ItemClaimContent() {
   const searchParams = useSearchParams();
   const userName = searchParams.get('name') || 'Guest';
 
@@ -62,7 +62,7 @@ export default function ItemClaimApp() {
       <div className="max-w-2xl mx-auto">
         <div className="bg-white rounded-lg shadow-lg p-6">
           <div className="mb-6">
-            <h1 className="text-3xl font-bold text-gray-800 mb-2">🚀Lyft-off!</h1>
+            <h1 className="text-3xl font-bold text-gray-800 mb-2">Event Tasks</h1>
             <p className="text-gray-600">
               Welcome, <span className="font-semibold text-indigo-600">{userName}</span>!
             </p>
@@ -122,6 +122,7 @@ export default function ItemClaimApp() {
               );
             })}
           </div>
+
 
         </div>
       </div>
