@@ -3,10 +3,11 @@
 import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { Check } from 'lucide-react';
+import { use } from 'react'
 
-export default function ItemClaimContent() {
-  const searchParams = useSearchParams();
-  const userName = searchParams.get('name') || 'Guest';
+export default function ItemClaimContent({ searchParams }) {
+  const params = use(searchParams);
+  const userName = params.name || 'Guest';
 
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
