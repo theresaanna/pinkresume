@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import db from '/lib/db';
+import { sql } from '/lib/db';
 
 export async function POST(request, { params }) {
   try {
@@ -7,7 +7,8 @@ export async function POST(request, { params }) {
     const itemId = parseInt(params.id);
 
     // Get current item state
-    const item = db.prepare('SELECT * FROM items WHERE id = ?').get(itemId);
+    const { rows } = await sql`SELECT * FROM items WHERE id = ${itemId}`;
+    const item = rows[0];
 
     if (!item) {
       return NextResponse.json({ error: 'Item not found' }, { status: 404 });
@@ -15,16 +16,17 @@ export async function POST(request, { params }) {
 
     // If unclaimed, claim it. If claimed by this user, unclaim it.
     if (!item.claimed_by) {
-      db.prepare('UPDATE items SET claimed_by = ? WHERE id = ?').run(userName, itemId);
+      await sql`UPDATE items SET claimed_by = ${userName} WHERE id = ${itemId}`;
     } else if (item.claimed_by === userName) {
-      db.prepare('UPDATE items SET claimed_by = NULL WHERE id = ?').run(itemId);
+      await sql`UPDATE items SET claimed_by = NULL WHERE id = ${itemId}`;
     } else {
       return NextResponse.json({ error: 'Item claimed by another user' }, { status: 403 });
     }
 
-    const updatedItem = db.prepare('SELECT * FROM items WHERE id = ?').get(itemId);
-    return NextResponse.json(updatedItem);
+    const { rows: updatedRows } = await sql`SELECT * FROM items WHERE id = ${itemId}`;
+    return NextResponse.json(updatedRows[0]);
   } catch (error) {
+    console.error('Error updating item:', error);
     return NextResponse.json({ error: 'Failed to update item' }, { status: 500 });
   }
 }

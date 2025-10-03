@@ -23,6 +23,7 @@
     "@types/better-sqlite3": "^7.6.13",
     "@uiw/react-md-editor": "^4.0.8",
     "@vercel/analytics": "^1.5.0",
+    "@vercel/postgres": "^0.10.0",
     "@vercel/speed-insights": "^1.2.0",
     "better-sqlite3": "^12.4.1",
     "gray-matter": "^4.0.3",
