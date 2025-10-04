@@ -69,7 +69,7 @@ export default function ItemClaimContent({ searchParams }) {
             </p>
             <p className="text-sm text-gray-500 mt-1">
               Check off items to claim them<br/>
-              Buy eligible items on my <a href="https://www.amazon.com/registries/gl/guest-view/2GCEWLXOMX3H0" target="_blank" style="color: #4f46e5;">Amazon wishlist</a>.
+              Buy eligible items on my <a href="https://www.amazon.com/registries/gl/guest-view/2GCEWLXOMX3H0" target="_blank" style="color: #4f46e5">Amazon wishlist</a>.
             </p>
           </div>
 
