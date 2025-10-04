@@ -60,6 +60,14 @@ export default function ItemClaimContent({ searchParams }) {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-8">
+        <style jsx global>{`
+            a {
+              color: #4f46e5;
+            }
+            a:hover {
+              color: #4338ca;
+            }
+        `}</style>
       <div className="max-w-2xl mx-auto">
         <div className="bg-white rounded-lg shadow-lg p-6">
           <div className="mb-6">
@@ -124,15 +132,6 @@ export default function ItemClaimContent({ searchParams }) {
               );
             })}
           </div>
-          <style jsx global>{`
-            a {
-              color: #4f46e5;
-            }
-            a:hover {
-              color: #4338ca;
-            }
-          `}</style>
-
         </div>
       </div>
     </div>
