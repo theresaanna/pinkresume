@@ -68,7 +68,8 @@ export default function ItemClaimContent({ searchParams }) {
               Welcome, <span className="font-semibold text-indigo-600">{userName}</span>!
             </p>
             <p className="text-sm text-gray-500 mt-1">
-              Check off items to claim them
+              Check off items to claim them<br/>
+              Buy eligible items on my <a href="https://www.amazon.com/registries/gl/guest-view/2GCEWLXOMX3H0" target="_blank">Amazon wishlist</a>.
             </p>
           </div>
 
