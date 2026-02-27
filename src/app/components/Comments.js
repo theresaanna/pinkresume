@@ -13,7 +13,7 @@ const Comments = () => {
       script.setAttribute('data-repo-id', 'R_kgDOL9BBAQ'); // Get from giscus.app
       script.setAttribute('data-category', 'Announcements');
       script.setAttribute('data-category-id', 'DIC_kwDOL9BBAc4Cuz4x'); // Get from giscus.app
-        script.setAttribute('data-theme', 'transparent_dark');
+        script.setAttribute('data-theme', 'light');
         script.setAttribute('data-mapping', 'pathname');
       script.setAttribute('data-strict', '0');
       script.setAttribute('data-reactions-enabled', '1');

@@ -1,11 +1,37 @@
 @media print {
   :root {
-    --green: #536878; /* gray */
+    --pale-sky: #ffffff;
+    --pale-sky-light: #f5f5f5;
+    --steel-blue: #555555;
+    --blue-slate: #333333;
+    --blue-slate-dark: #111111;
   }
 
   body {
-    margin: 0 1rem;
-    padding: 0 .5rem;
-    border: 0;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+  }
+
+  .site-header {
+    background: none;
+  }
+
+  .site-nav {
+    display: none;
+  }
+
+  .section-light, .section-mid {
+    background: none;
+    padding: 0.5rem 0;
+  }
+
+  .section-content {
+    max-width: 100%;
+  }
+
+  a {
+    color: #111;
+    border-bottom: none;
   }
 }

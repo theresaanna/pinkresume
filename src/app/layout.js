@@ -1,4 +1,4 @@
-import { Rethink_Sans } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import "./print.css";
@@ -7,7 +7,7 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 
 config.autoAddCss = false
 
-const rethink = Rethink_Sans({ weight: ["400", "700"], subsets: ["latin"] });
+const montserrat = Montserrat({ weight: ["400", "700"], subsets: ["latin"] });
 
 export const metadata = {
   title: "The Resume of Theresa Summa",
@@ -21,7 +21,20 @@ export default function RootLayout({ children }) {
         <title>The Resume of Theresa Summa, Software Engineer and Engineering Leader</title>
       </head>
       <GoogleAnalytics gaId="G-JSKZT4ET8L" />
-      <body className={rethink.className}>{children}</body>
+      <body className={montserrat.className}>
+        <header className="site-header">
+          <h1><a href="/">Theresa Summa</a></h1>
+          <h2>Software Engineer and Engineering Leader</h2>
+          <nav className="site-nav">
+            <a href="/#blog">Writing</a>
+            <a href="/#projects">Projects</a>
+            <a href="/#resume">Resume</a>
+            <a href="/#contact">Contact</a>
+            <a href="/#about">About</a>
+          </nav>
+        </header>
+        <main>{children}</main>
+      </body>
     </html>
   );
 }
