@@ -31,6 +31,7 @@ export default function RootLayout({ children }) {
             <a href="/#resume">Resume</a>
             <a href="/#contact">Contact</a>
             <a href="/#about">About</a>
+              <a href="/resume">Print</a>
           </nav>
         </header>
         <main>{children}</main>

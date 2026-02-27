@@ -14,8 +14,8 @@ async function Home() {
         <div className="section-content">
           <strong>Hi.</strong><br/>
           <h2>This is my software engineering blog and resume.</h2>
-          <h3>I have been a software engineer professionally since 2007.</h3>
-            <p>Here you will find information about my personal projects and professional experience.</p>
+          <p>I have been a software engineer professionally since 2007.<br/>
+              Here you will find information about my personal projects and professional experience.</p>
         </div>
       </section>
 
