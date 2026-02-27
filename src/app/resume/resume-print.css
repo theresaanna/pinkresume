@@ -1,0 +1,253 @@
+/* Resume page styles */
+
+.resume-page {
+  background-color: var(--pale-sky);
+  padding: 2rem 0;
+}
+
+.resume-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 3rem;
+  color: var(--blue-slate-dark);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.resume-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.resume-header h1 {
+  font-size: 2rem;
+  color: var(--blue-slate-dark);
+  margin: 0;
+}
+
+.resume-subtitle {
+  font-size: 1.1rem;
+  color: var(--steel-blue);
+  margin: 0.25rem 0 !important;
+  padding: 0 !important;
+}
+
+.resume-contact {
+  font-size: 0.9rem;
+  color: var(--blue-slate);
+  margin: 0.25rem 0 !important;
+  padding: 0 !important;
+}
+
+.resume-tagline {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--steel-blue);
+  margin: 0.5rem 0 !important;
+  padding: 0 !important;
+  border-bottom: 2px solid var(--steel-blue);
+  display: inline-block;
+}
+
+.resume-links {
+  font-size: 0.9rem;
+  margin: 0.5rem 0 0 0 !important;
+  padding: 0 !important;
+}
+
+.resume-summary {
+  font-size: 1.05rem;
+  font-style: italic;
+  font-weight: 700;
+  color: var(--blue-slate-dark);
+  text-align: center;
+  margin: 1rem 0 !important;
+}
+
+/* Dividers */
+.resume-divider {
+  border-top: 1px solid var(--steel-blue);
+  margin: 1.5rem 0;
+  opacity: 1;
+}
+
+/* Sections */
+.resume-section {
+  margin-bottom: 0.5rem;
+}
+
+.resume-section-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--steel-blue);
+  margin: 0 0 1rem 0;
+}
+
+.resume-date-range {
+  font-weight: 400;
+  color: var(--blue-slate);
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+
+/* Entries */
+.resume-entry {
+  margin-bottom: 1.5rem;
+}
+
+.resume-entry h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--blue-slate-dark);
+  margin: 0 0 0.25rem 0;
+}
+
+.resume-role {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--blue-slate);
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.resume-entry p {
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+  padding: 0;
+}
+
+.resume-entry ul {
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+  padding: 0 0 0 1.25rem;
+  list-style: disc;
+}
+
+.resume-entry ul ul {
+  margin: 0.25rem 0;
+  list-style: circle;
+}
+
+.resume-entry li {
+  margin-bottom: 0.35rem;
+}
+
+/* Interests grid */
+.resume-interests {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.25rem 2rem;
+  list-style: disc;
+  padding-left: 1.25rem !important;
+  font-size: 0.9rem;
+}
+
+/* Print styles */
+@media print {
+  .site-header {
+    display: none;
+  }
+
+  .resume-page {
+    background: none;
+    padding: 0;
+  }
+
+  .resume-container {
+    box-shadow: none;
+    padding: 0;
+    max-width: 100%;
+    line-height: 1.35;
+  }
+
+  .resume-header {
+    margin-bottom: 1rem;
+  }
+
+  .resume-header h1 {
+    color: #111;
+  }
+
+  .resume-subtitle {
+    color: #444;
+  }
+
+  .resume-contact {
+    color: #333;
+  }
+
+  .resume-tagline {
+    color: #444;
+    border-bottom-color: #444;
+  }
+
+  .resume-summary {
+    color: #111;
+    margin: 0.5rem 0 !important;
+  }
+
+  .resume-divider {
+    border-top-color: #999;
+    margin: 0.75rem 0;
+  }
+
+  .resume-section {
+    margin-bottom: 0.25rem;
+  }
+
+  .resume-section-title {
+    color: #444;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .resume-date-range {
+    color: #555;
+  }
+
+  .resume-entry {
+    margin-bottom: 0.75rem;
+  }
+
+  .resume-entry h3 {
+    color: #111;
+  }
+
+  .resume-entry p {
+    margin: 0.25rem 0;
+  }
+
+  .resume-entry ul {
+    margin: 0.25rem 0;
+  }
+
+  .resume-entry li {
+    margin-bottom: 0.15rem;
+  }
+
+  .resume-role {
+    color: #333;
+  }
+
+  .resume-entry p,
+  .resume-entry li {
+    color: #222;
+  }
+
+  .resume-container a {
+    color: #111;
+    border-bottom: none;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .resume-container {
+    margin: 0 1rem;
+    padding: 1.5rem;
+  }
+
+  .resume-interests {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
