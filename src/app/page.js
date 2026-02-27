@@ -123,7 +123,6 @@ housing crisis off the ground technologically.</p>
             <li>Text only: <a href="tel:13474150944">+1-347-415-0944</a></li>
             <li><a href="https://github.com/theresaanna">Github</a></li>
             <li><a href="https://linkedin.com/in/theresasumma">LinkedIn</a></li>
-            <li><a href="https://threads.com/@hellyeahitstheresa">Threads</a></li>
           </ul>
         </div>
       </section>
