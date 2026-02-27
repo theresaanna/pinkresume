@@ -41,6 +41,7 @@ async function Home() {
       <section className="section-mid" id="resume">
         <div className="section-content">
           <h1>My Experience <a href="/resume" style={{fontSize: '0.875rem', fontWeight: 400}}>Print Resume</a></h1>
+          <h2>Federal Government Era 2012-2018</h2>
           <div className="job">
             <strong><a href="https://www.linkedin.com/company/gsa18f/">18F/Technology Transformation Services, General Services Administration</a></strong><br/>
             <strong>Lead Innovation Specialist - Washington, DC - 2014-2018</strong>
@@ -70,6 +71,7 @@ housing crisis off the ground technologically.</p>
             </ul>
           </div>
 
+          <h2>Media Company Era 2012 and earlier</h2>
           <div className="job">
             <strong><a href="https://qz.com/">Quartz, An Atlantic Media Company</a></strong><br/>
             <strong>Web Application Engineer - New York, NY</strong>
