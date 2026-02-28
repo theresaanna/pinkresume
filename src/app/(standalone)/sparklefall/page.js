@@ -117,6 +117,15 @@ const initializeSparkles = () => {
         interval: 500,
         maxSparkles: 70,
         wind: 0.1
+      },
+      pride: {
+        sparkles: ['🏳️‍🌈', '🌈', '💜', '💙', '💚', '💛', '🧡', '❤️', '🏳️‍⚧️', '✨'],
+        interval: 600,
+        wind: 0.2,
+        maxSparkles: 60,
+        minSize: 20,
+        maxSize: 40,
+        spin: true
       }
     };
     
@@ -616,6 +625,7 @@ const pageHTML = `
             <button onclick="loadPreset('nature')">🍃 Nature</button>
             <button onclick="loadPreset('space')">🚀 Space</button>
             <button onclick="loadPreset('party')">🎉 Party</button>
+            <button onclick="loadPreset('pride')">🏳️‍🌈 Pride</button>
         </div>
     </header>
 
