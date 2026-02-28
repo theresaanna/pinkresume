@@ -10,7 +10,7 @@ config.autoAddCss = false
 const montserrat = Montserrat({ weight: ["400", "700"], subsets: ["latin"] });
 
 export const metadata = {
-  title: "The Resume of Theresa Summa",
+  title: "The Resume of Theresa Summa, Software Engineer and Engineering Leader",
   description: "Software Engineer and Engineering Leader",
 };
 
@@ -18,7 +18,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <title>The Resume of Theresa Summa, Software Engineer and Engineering Leader</title>
       </head>
       <GoogleAnalytics gaId="G-JSKZT4ET8L" />
       <body className={montserrat.className}>
