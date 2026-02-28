@@ -1,5 +1,10 @@
 import { NextResponse } from 'next/server';
+import { Resend } from 'resend';
 import { sql, initDb } from '../../../../../lib/db';
+
+function getResend() {
+  return new Resend(process.env.RESEND_API_KEY);
+}
 
 export async function GET(request) {
   try {
@@ -16,17 +21,33 @@ export async function GET(request) {
       UPDATE comments
       SET verified = TRUE
       WHERE verify_token = ${token} AND verified = FALSE
-      RETURNING post_slug
+      RETURNING post_slug, author_name, body
     `;
 
     if (rows.length === 0) {
       return NextResponse.json({ error: 'Invalid or already verified token' }, { status: 404 });
     }
 
-    const slug = rows[0].post_slug;
+    const { post_slug, author_name, body } = rows[0];
     const siteUrl = process.env.SITE_URL || 'https://theresasumma.com';
+    const postUrl = `${siteUrl}/blog/${post_slug}`;
 
-    return NextResponse.redirect(`${siteUrl}/blog/${slug}?verified=1`);
+    // Notify site owner of new verified comment
+    try {
+      await getResend().emails.send({
+        from: 'Theresa Summa Blog <noreply@theresasumma.com>',
+        to: 'theresasumma@gmail.com',
+        subject: `New comment on: ${post_slug}`,
+        html: `
+          <p><strong>${author_name}</strong> left a comment on <a href="${postUrl}">${post_slug}</a>:</p>
+          <blockquote>${body}</blockquote>
+        `,
+      });
+    } catch (emailError) {
+      console.error('Failed to send notification email:', emailError);
+    }
+
+    return NextResponse.redirect(`${postUrl}?verified=1`);
   } catch (error) {
     console.error('Error verifying comment:', error);
     return NextResponse.json({ error: 'Verification failed' }, { status: 500 });
