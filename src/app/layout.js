@@ -28,10 +28,9 @@ export default function RootLayout({ children }) {
           <nav className="site-nav">
             <a href="/#blog">Writing</a>
             <a href="/#projects">Projects</a>
-            <a href="/#resume">Resume</a>
+            <a href="/resume">Resume</a>
             <a href="/#contact">Contact</a>
             <a href="/#about">About</a>
-              <a href="/resume">Print</a>
           </nav>
         </header>
         <main>{children}</main>

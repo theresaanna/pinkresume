@@ -151,6 +151,25 @@ hr {
   font-size: 0.875rem;
 }
 
+.view-all-link {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--steel-blue);
+}
+
+.pagination-info {
+  color: var(--blue-slate);
+  font-size: 0.875rem;
+}
+
 .update {
   border-bottom: 1px solid var(--steel-blue);
 }
