@@ -1,6 +1,6 @@
-import { getBlogPosts } from "../components/blog-list";
+import { getBlogPosts } from "../../components/blog-list";
 import Link from "next/link";
-import { stripMarkdown } from "../../utils/stripMarkdown";
+import { stripMarkdown } from "../../../utils/stripMarkdown";
 
 const POSTS_PER_PAGE = 15;
 

@@ -4,7 +4,7 @@ import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import Link from "next/link";
-import Comments from "../../components/Comments";
+import Comments from "../../../components/Comments";
 
 export default async function BlogPost({ params }) {
   const { slug } = await params;
