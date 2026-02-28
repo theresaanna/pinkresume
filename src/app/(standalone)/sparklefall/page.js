@@ -121,16 +121,18 @@ const initializeSparkles = () => {
     };
     
     const config = presets[preset] || presets.default;
+    currentPreset = presets[preset] ? preset : 'default';
     initSparkles(config);
-    
+
     // Update UI controls
     if (config.interval) document.getElementById('interval').value = config.interval;
     if (config.wind !== undefined) document.getElementById('wind').value = config.wind;
     if (config.maxSparkles) document.getElementById('maxSparkles').value = config.maxSparkles;
     if (config.sparkles) document.getElementById('sparkleChars').value = config.sparkles.join(',');
     if (config.colors) document.getElementById('colors').value = config.colors.join(',');
-    
+
     updateDisplayValues();
+    syncToURL();
   };
   
   // Update sparkles with current control values
@@ -139,7 +141,7 @@ const initializeSparkles = () => {
     const colorsInput = document.getElementById('colors').value;
     const colors = colorsInput ? colorsInput.split(',').map(c => c.trim()) : null;
     const size = parseInt(document.getElementById('sparkleSize').value);
-    
+
     const config = {
       interval: parseInt(document.getElementById('interval').value),
       wind: parseFloat(document.getElementById('wind').value),
@@ -149,8 +151,10 @@ const initializeSparkles = () => {
       sparkles: sparkleChars,
       colors: colors
     };
-    
+
+    currentPreset = null;
     initSparkles(config);
+    syncToURL();
   };
   
   // Toggle sparkles
@@ -169,6 +173,34 @@ const initializeSparkles = () => {
     }
   };
   
+  // Sync current settings to URL query string
+  let currentPreset = null;
+  window.syncToURL = function() {
+    const params = new URLSearchParams();
+    if (currentPreset) {
+      // Preset is active — just store the preset name
+      if (currentPreset !== 'default') {
+        params.set('preset', currentPreset);
+      }
+    } else {
+      // Custom settings — store individual values (skip defaults)
+      const interval = document.getElementById('interval').value;
+      const wind = document.getElementById('wind').value;
+      const max = document.getElementById('maxSparkles').value;
+      const size = document.getElementById('sparkleSize').value;
+      const chars = document.getElementById('sparkleChars').value;
+      const cols = document.getElementById('colors').value;
+      if (interval !== '800') params.set('interval', interval);
+      if (wind !== '0') params.set('wind', wind);
+      if (max !== '50') params.set('maxSparkles', max);
+      if (size !== '20') params.set('size', size);
+      if (chars !== '✨,⭐,💫,🌟') params.set('sparkles', chars);
+      if (cols) params.set('colors', cols);
+    }
+    const qs = params.toString();
+    history.replaceState(null, '', qs ? '?' + qs : window.location.pathname);
+  };
+
   // Update display values
   window.updateDisplayValues = function() {
     document.getElementById('intervalValue').textContent = document.getElementById('interval').value + 'ms';
@@ -231,7 +263,46 @@ const sparkles = new SparkleFall({
   // Initialize on load
   setTimeout(() => {
     addEventListeners();
-    window.loadPreset('default');
+
+    // Read settings from URL query params
+    const params = new URLSearchParams(window.location.search);
+    const preset = params.get('preset');
+    window.loadPreset(preset || 'default');
+
+    // Override individual params after preset
+    const overrides = {};
+    if (params.has('interval')) {
+      const v = parseInt(params.get('interval'));
+      if (!isNaN(v)) { document.getElementById('interval').value = v; overrides.interval = v; }
+    }
+    if (params.has('wind')) {
+      const v = parseFloat(params.get('wind'));
+      if (!isNaN(v)) { document.getElementById('wind').value = v; overrides.wind = v; }
+    }
+    if (params.has('maxSparkles')) {
+      const v = parseInt(params.get('maxSparkles'));
+      if (!isNaN(v)) { document.getElementById('maxSparkles').value = v; overrides.maxSparkles = v; }
+    }
+    if (params.has('size')) {
+      const v = parseInt(params.get('size'));
+      if (!isNaN(v)) { document.getElementById('sparkleSize').value = v; overrides.minSize = v - 10; overrides.maxSize = v + 10; }
+    }
+    if (params.has('sparkles')) {
+      const v = params.get('sparkles');
+      document.getElementById('sparkleChars').value = v;
+      overrides.sparkles = v.split(',').map(s => s.trim());
+    }
+    if (params.has('colors')) {
+      const v = params.get('colors');
+      document.getElementById('colors').value = v;
+      overrides.colors = v.split(',').map(c => c.trim());
+    }
+
+    // Apply overrides if any individual params were set
+    if (Object.keys(overrides).length > 0) {
+      window.updateDisplayValues();
+      window.updateSparkles();
+    }
   }, 100);
 };
 
