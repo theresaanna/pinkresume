@@ -31,7 +31,7 @@ export default async function BlogPost({ params }) {
         <h1>{data.title}</h1>
         <p className="text-sm">{new Date(data.date).toDateString()}</p>
         <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
-        <Comments />
+        <Comments slug={slug} />
         <p className="mt-8"><Link href="/blog">← Back to blog</Link></p>
       </div>
     </section>

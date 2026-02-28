@@ -1,3 +1,18 @@
+/* Hide site header when resume page is shown */
+body:has(.resume-page) .site-header {
+  display: none;
+}
+
+/* Back navigation */
+.resume-back-nav {
+  padding: 1rem 2rem;
+  background-color: var(--pale-sky);
+}
+
+.resume-back-nav a {
+  font-size: 0.9rem;
+}
+
 /* Resume page styles */
 
 .resume-page {
@@ -145,6 +160,10 @@
 
 /* Print styles */
 @media print {
+  .resume-back-nav {
+    display: none;
+  }
+
   .site-header {
     display: none;
   }

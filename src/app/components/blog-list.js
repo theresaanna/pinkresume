@@ -36,7 +36,7 @@ export async function getBlogPosts() {
 }
 
 // Blog listing component
-const BlogList = ({ posts }) => {
+const BlogList = ({ posts, limit }) => {
   if (!posts || posts.length === 0) {
     return (
       <div className="blog">
@@ -46,10 +46,12 @@ const BlogList = ({ posts }) => {
     );
   }
 
+  const displayPosts = limit ? posts.slice(0, limit) : posts;
+
   return (
     <div className="blog">
       <h1><a name="blog">Recent Writing</a></h1>
-      {posts.map((post, index) => (
+      {displayPosts.map((post, index) => (
         <div key={post.slug} className="blog-post">
           <strong>
             <a href={`/blog/${post.slug}`}>{post.title}</a>
@@ -66,6 +68,9 @@ const BlogList = ({ posts }) => {
           <p>{post.excerpt}</p>
         </div>
       ))}
+      {limit && posts.length > limit && (
+        <a href="/blog" className="view-all-link">View all writing &rarr;</a>
+      )}
     </div>
   );
 };
