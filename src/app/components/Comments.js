@@ -121,24 +121,26 @@ const Comments = ({ slug }) => {
           />
         </div>
 
-        <button
-          type="submit"
-          disabled={status === 'submitting'}
-          className="comment-submit"
-        >
-          {status === 'submitting' ? 'Posting...' : 'Post Comment'}
-        </button>
+        <div className="comment-submit-row">
+          <button
+            type="submit"
+            disabled={status === 'submitting'}
+            className="comment-submit"
+          >
+            {status === 'submitting' ? 'Posting...' : 'Post Comment'}
+          </button>
 
-        {status === 'success' && (
-          <p className="comment-message">
-            Check your email to verify your comment.
-          </p>
-        )}
-        {status === 'error' && (
-          <p className="comment-message comment-error">
-            Something went wrong. Please try again.
-          </p>
-        )}
+          {status === 'success' && (
+            <p className="comment-message comment-success">
+              Check your email to verify your comment.
+            </p>
+          )}
+          {status === 'error' && (
+            <p className="comment-message comment-error">
+              Something went wrong. Please try again.
+            </p>
+          )}
+        </div>
       </form>
     </div>
   );

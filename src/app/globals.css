@@ -236,9 +236,21 @@ hr {
   opacity: 0.7;
 }
 
+.comment-submit-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .comment-message {
   font-size: 0.875rem;
-  color: var(--blue-slate);
+  margin: 0;
+  padding: 0;
+}
+
+.comment-success {
+  font-weight: bold;
+  color: var(--blue-slate-dark);
 }
 
 .comment-error {
