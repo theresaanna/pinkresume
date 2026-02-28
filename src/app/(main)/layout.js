@@ -1,7 +1,7 @@
 import { Montserrat } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import "./globals.css";
-import "./print.css";
+import "../globals.css";
+import "../print.css";
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 
@@ -14,11 +14,9 @@ export const metadata = {
   description: "Software Engineer and Engineering Leader",
 };
 
-export default function RootLayout({ children }) {
+export default function MainLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-      </head>
       <GoogleAnalytics gaId="G-JSKZT4ET8L" />
       <body className={montserrat.className}>
         <header className="site-header">
