@@ -126,6 +126,36 @@ const initializeSparkles = () => {
         minSize: 20,
         maxSize: 40,
         spin: true
+      },
+      creepy: {
+        sparkles: ['☠️', '🎃', '🧛🏻', '🐈‍⬛', '👻', '🧙🏻'],
+        interval: 800,
+        wind: 0,
+        maxSparkles: 50
+      },
+      spring: {
+        sparkles: ['🐰', '🐣', '🌷', '💐', '🌱'],
+        interval: 800,
+        wind: 0,
+        maxSparkles: 50
+      },
+      summer: {
+        sparkles: ['🤿', '👙', '☀️', '⛱️', '🕶️'],
+        interval: 800,
+        wind: 0,
+        maxSparkles: 50
+      },
+      winter: {
+        sparkles: ['❄️', '☃️', '🧣', '🛷', '🧤', '⛸️'],
+        interval: 800,
+        wind: 0,
+        maxSparkles: 50
+      },
+      autumn: {
+        sparkles: ['🍂', '🍁', '🦃', '🥧', '🍃'],
+        interval: 800,
+        wind: 0,
+        maxSparkles: 50
       }
     };
     
@@ -726,6 +756,11 @@ const pageHTML = `
             <button onclick="loadPreset('space')">🚀 Space</button>
             <button onclick="loadPreset('party')">🎉 Party</button>
             <button onclick="loadPreset('pride')">🏳️‍🌈 Pride</button>
+            <button onclick="loadPreset('creepy')">👻 Creepy</button>
+            <button onclick="loadPreset('spring')">🌷 Spring</button>
+            <button onclick="loadPreset('summer')">☀️ Summer</button>
+            <button onclick="loadPreset('winter')">❄️ Winter</button>
+            <button onclick="loadPreset('autumn')">🍂 Autumn</button>
         </div>
     </header>
 
