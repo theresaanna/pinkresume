@@ -130,6 +130,14 @@ const initializeSparkles = () => {
     if (config.maxSparkles) document.getElementById('maxSparkles').value = config.maxSparkles;
     if (config.sparkles) document.getElementById('sparkleChars').value = config.sparkles.join(',');
     if (config.colors) document.getElementById('colors').value = config.colors.join(',');
+    // Map duration back to weight: avg duration 1s=10(heavy), 7s=1(light), default 3.5s=5
+    if (config.minDuration !== undefined && config.maxDuration !== undefined) {
+      const avgDur = (config.minDuration + config.maxDuration) / 2;
+      const weight = Math.round(Math.max(1, Math.min(10, 11 - avgDur * 1.5)));
+      document.getElementById('weight').value = weight;
+    } else {
+      document.getElementById('weight').value = 5;
+    }
 
     updateDisplayValues();
     syncToURL();
@@ -142,12 +150,20 @@ const initializeSparkles = () => {
     const colors = colorsInput ? colorsInput.split(',').map(c => c.trim()) : null;
     const size = parseInt(document.getElementById('sparkleSize').value);
 
+    // Weight slider: 1 (light/slow) to 10 (heavy/fast)
+    // Maps to duration: weight 1 = 6-8s, weight 5 = 2-5s (default), weight 10 = 0.5-1s
+    const weight = parseInt(document.getElementById('weight').value);
+    const minDuration = Math.max(0.5, (11 - weight) * 0.7 - 0.5);
+    const maxDuration = Math.max(1, (11 - weight) * 0.7 + 0.5);
+
     const config = {
       interval: parseInt(document.getElementById('interval').value),
       wind: parseFloat(document.getElementById('wind').value),
       maxSparkles: parseInt(document.getElementById('maxSparkles').value),
       minSize: size - 10,
       maxSize: size + 10,
+      minDuration: minDuration,
+      maxDuration: maxDuration,
       sparkles: sparkleChars,
       colors: colors
     };
@@ -190,10 +206,12 @@ const initializeSparkles = () => {
       const size = document.getElementById('sparkleSize').value;
       const chars = document.getElementById('sparkleChars').value;
       const cols = document.getElementById('colors').value;
+      const wt = document.getElementById('weight').value;
       if (interval !== '800') params.set('interval', interval);
       if (wind !== '0') params.set('wind', wind);
       if (max !== '50') params.set('maxSparkles', max);
       if (size !== '20') params.set('size', size);
+      if (wt !== '5') params.set('weight', wt);
       if (chars !== '✨,⭐,💫,🌟') params.set('sparkles', chars);
       if (cols) params.set('colors', cols);
     }
@@ -208,6 +226,9 @@ const initializeSparkles = () => {
     document.getElementById('maxSparklesValue').textContent = document.getElementById('maxSparkles').value;
     const size = document.getElementById('sparkleSize').value;
     document.getElementById('sizeValue').textContent = `${size - 10}-${size + 10}px`;
+    const weight = parseInt(document.getElementById('weight').value);
+    const labels = ['', 'feather', 'very light', 'light', 'light-medium', 'medium', 'medium-heavy', 'heavy', 'very heavy', 'boulder', 'anvil'];
+    document.getElementById('weightValue').textContent = labels[weight] || 'medium';
   };
   
   // Update code display
@@ -220,6 +241,8 @@ const sparkles = new SparkleFall({
     maxSparkles: ${config.maxSparkles || 50},
     minSize: ${config.minSize || 10},
     maxSize: ${config.maxSize || 30},
+    minDuration: ${config.minDuration || 2},
+    maxDuration: ${config.maxDuration || 5},
     sparkles: ${JSON.stringify(sparkles)},
     colors: ${config.colors ? JSON.stringify(config.colors) : 'null'}
 });`;
@@ -235,19 +258,21 @@ const sparkles = new SparkleFall({
     const wind = document.getElementById('wind');
     const maxSparkles = document.getElementById('maxSparkles');
     const sparkleSize = document.getElementById('sparkleSize');
+    const weight = document.getElementById('weight');
     const sparkleChars = document.getElementById('sparkleChars');
     const colors = document.getElementById('colors');
-    
+
     // Update display values and apply changes in real-time for sliders
     const handleSliderChange = () => {
       window.updateDisplayValues();
       window.updateSparkles();
     };
-    
+
     if (interval) interval.addEventListener('input', handleSliderChange);
     if (wind) wind.addEventListener('input', handleSliderChange);
     if (maxSparkles) maxSparkles.addEventListener('input', handleSliderChange);
     if (sparkleSize) sparkleSize.addEventListener('input', handleSliderChange);
+    if (weight) weight.addEventListener('input', handleSliderChange);
     
     // Add enter key support for text inputs
     const handleTextEnter = (e) => {
@@ -286,6 +311,10 @@ const sparkles = new SparkleFall({
     if (params.has('size')) {
       const v = parseInt(params.get('size'));
       if (!isNaN(v)) { document.getElementById('sparkleSize').value = v; overrides.minSize = v - 10; overrides.maxSize = v + 10; }
+    }
+    if (params.has('weight')) {
+      const v = parseInt(params.get('weight'));
+      if (!isNaN(v) && v >= 1 && v <= 10) { document.getElementById('weight').value = v; overrides._weight = true; }
     }
     if (params.has('sparkles')) {
       const v = params.get('sparkles');
@@ -712,6 +741,11 @@ const pageHTML = `
             <div class="control-group">
                 <label for="sparkleSize">Size Range: <span class="value-display" id="sizeValue">10-30px</span></label>
                 <input type="range" id="sparkleSize" min="5" max="50" value="20" step="5">
+            </div>
+
+            <div class="control-group">
+                <label for="weight">Weight: <span class="value-display" id="weightValue">medium</span></label>
+                <input type="range" id="weight" min="1" max="10" value="5" step="1">
             </div>
 
             <div class="control-group">
