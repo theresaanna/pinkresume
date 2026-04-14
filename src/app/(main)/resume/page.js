@@ -26,10 +26,6 @@ export default function ResumePage() {
           </p>
         </header>
 
-        <p className="resume-summary">
-          Highly experienced and always learning, I am presently continuing my engineering journey by defining a next phase in my work and evolution.
-        </p>
-
         <hr className="resume-divider" />
 
         {/* Education and Self-Directed Project Highlights */}
@@ -38,6 +34,45 @@ export default function ResumePage() {
             Education and Self-Directed Project Highlights
             <span className="resume-date-range">2018-current</span>
           </h2>
+
+          <div className="resume-entry">
+            <h3>
+              VibrantSocial
+              <span className="resume-date-range">2026- (current)</span>
+            </h3>
+            <p>VibrantSocial is a social media app for the folks who want the days of MySpace back. I have created it alone so far. It is currently a web app, and I am building native apps to accompany it.</p>
+            <ul>
+              <li>
+                Vibrant:
+                <ul>
+                  <li>uses next.js and TypeScript for the web app, using Expo for native apps,</li>
+                  <li>has real time chat and chat room features using Ably for real time services,</li>
+                  <li>uses Prisma ORM and a PostgresSQL database hosted on Neon, Vercel is the web host,</li>
+                  <li>has a Docker container running Python that scans for adult, sensitive material and CSAM,</li>
+                  <li>uses Redis rate limiting, along with Inngest for long-running jobs,</li>
+                  <li>implements TOTP 2FA and Cloudflare Turnstile for security, in part,</li>
+                  <li>has a robust suite of unit and E2E tests using vitest, React Testing Library and Playwright,</li>
+                  <li>includes Zod for type schemas and the Anthropic API for AI touches.</li>
+                </ul>
+                Features Include:
+                <ul>
+                  <li>posts with fine grain audience control,</li>
+                  <li>a full text and media editor for posts and bios,</li>
+                  <li>app-wide custom themes, can see other user's themes on their pages,</li>
+                  <li>real-time direct chat, group chats and chat rooms,</li>
+                  <li>custom image frames, username fonts,</li>
+                  <li>AI-generated post tags, theme color profiles, AI-generated "while you were away" summary,</li>
+                  <li>multiple post feed views and configurations,</li>
+                  <li>post and people notification and email subscriptions,</li>
+                  <li>a marketplace a la Facebook Marketplace,</li>
+                  <li>ability to upload/download app themes,</li>
+                  <li>full threaded comment discussions on posts,</li>
+                  <li>a suite of content moderation tools,</li>
+                  <li>user-made lists of users per theme, more!</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
 
           <div className="resume-entry">
             <h3>
@@ -63,7 +98,7 @@ export default function ResumePage() {
           <div className="resume-entry">
             <h3>
               VibeCheckAI
-              <span className="resume-date-range">2025-current</span>
+              <span className="resume-date-range">2025-2026</span>
             </h3>
             <p>VibeCheckAI is a tool for small to medium size content creators to gather meaningful and actionable feedback based on their audiences&apos; comments and posts.</p>
             <ul>
