@@ -40,7 +40,7 @@ export default function ResumePage() {
               VibrantSocial
               <span className="resume-date-range">2026- (current)</span>
             </h3>
-            <p>VibrantSocial is a social media app for the folks who want the days of MySpace back. I have created it alone so far. It is currently a web app, and I am building native apps to accompany it.</p>
+            <p>VibrantSocial is a social media app for the folks who want the days of MySpace back. I have created it alone so far.</p>
             <ul>
               <li>
                 Vibrant:
@@ -60,10 +60,10 @@ export default function ResumePage() {
                 <ul>
                   <li>posts with fine grain audience control,</li>
                   <li>a full text and media editor for posts and bios,</li>
-                  <li>app-wide custom themes, can see other user's themes on their pages,</li>
+                  <li>app-wide custom themes, can see themes from other users on their pages,</li>
                   <li>real-time direct chat, group chats and chat rooms,</li>
                   <li>custom image frames, username fonts,</li>
-                  <li>AI-generated post tags, theme color profiles, AI-generated "while you were away" summary,</li>
+                  <li>AI-generated post tags, theme color profiles, While You Were Away summary,</li>
                   <li>multiple post feed views and configurations,</li>
                   <li>post and people notification and email subscriptions,</li>
                   <li>a marketplace a la Facebook Marketplace,</li>
