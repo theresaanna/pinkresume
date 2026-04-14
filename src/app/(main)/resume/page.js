@@ -54,6 +54,8 @@ export default function ResumePage() {
                   <li>has a robust suite of unit and E2E tests using vitest, React Testing Library and Playwright,</li>
                   <li>includes Zod for type schemas and the Anthropic API for AI touches.</li>
                 </ul>
+              </li>
+              <li>
                 Features Include:
                 <ul>
                   <li>posts with fine grain audience control,</li>
